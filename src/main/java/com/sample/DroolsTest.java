@@ -17,10 +17,10 @@ public class DroolsTest {
     	    KieContainer kContainer = ks.getKieClasspathContainer();
         	KieSession kSession = kContainer.newKieSession("ksession-rules");
         	KieRuntimeLogger kLogger = ks.getLoggers().newFileLogger(kSession, "test");
-
+        	
             // go !
-            kSession.fireAllRules();
-            kLogger.close();
+        	kSession.fireAllRules();
+        	kLogger.close();
         } catch (Throwable t) {
             t.printStackTrace();
         }
