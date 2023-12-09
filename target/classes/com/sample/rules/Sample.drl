@@ -1,3 +1,29 @@
 package com.sample.rules
  
-import com.sample.DroolsTest.*;
+import java.util.*;
+
+// Klasa pytania
+declare Question
+	questionText: String
+	questionOptions: List<String>
+	choiceType: ChoiceTypes //TODO
+	answer: String
+end
+
+// Enumerator Radio/Checkbox
+declare enum ChoiceTypes
+	RADIO,CHECK;
+end
+
+rule "test init"
+	when
+	then
+		insert(new Question("What kind of channel do you want to watch?", Arrays.asList("Musician", "Vlogger"), ChoiceTypes.RADIO, ""));
+end
+
+rule "test print"
+	when
+		q: Question(choiceType == ChoiceTypes.RADIO)
+	then
+		System.out.println(q.getChoiceType());
+end
