@@ -5,7 +5,7 @@ import javax.swing.*;
 import java.awt.event.*;
 import java.util.*;
 
-// Funkcja zadajπca pytanie i przyjmujπca odpowiedz
+// Funkcja zadajπca pytanie i przyjmujπca odpowiedü
 function String askQuestion(Question q){
 	JPanel panel = new JPanel(); // Tworzymy panel i layout
 	panel.setLayout(new BoxLayout(panel, BoxLayout.PAGE_AXIS)); // elementy jeden pod drugim
@@ -29,7 +29,7 @@ function String askQuestion(Question q){
     }
     radios.get(0).setSelected(true);
     
-    // Zbieramy odpowiedz
+    // Zbieramy odpowiedü
     JOptionPane.showMessageDialog(null, panel);
     for(int i=0; i<numOfButtons; i++) {
     	if(radios.get(i).isSelected()){
