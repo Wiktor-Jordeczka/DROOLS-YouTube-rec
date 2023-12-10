@@ -1,0 +1,5 @@
+﻿question id, question text, choice type, number of choices, choice 1, [choice 2], [choice 3]
+starting question, What kind of channel do you want to watch?, radio, 2, Musician, Vlogger
+musician type, Wizard rocker or muggle musician?, radio, 2, Wizard, Muggle
+collab or single, Do you want a collab or a single channel?, radio, 2, Collab, Single
+test, 3 opt, radio, 3, Collab, Single, lole

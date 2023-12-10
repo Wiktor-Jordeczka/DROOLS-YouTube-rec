@@ -3,9 +3,11 @@ package com.sample.rules
 import java.util.*;
 import javax.swing.*;
 import java.awt.event.*;
-import java.util.*;
+import java.io.*;
 
-// Funkcja zadaj�ca pytanie i przyjmująca odpowiedź
+
+
+// Funkcja zadająca pytanie i przyjmująca odpowiedź
 function String askQuestion(Question q){
 	JPanel panel = new JPanel(); // Tworzymy panel i layout
 	panel.setLayout(new BoxLayout(panel, BoxLayout.PAGE_AXIS)); // elementy jeden pod drugim
@@ -30,7 +32,7 @@ function String askQuestion(Question q){
     radios.get(0).setSelected(true);
     
     // Zbieramy odpowiedź
-    JOptionPane.showMessageDialog(null, panel);
+    JOptionPane.showMessageDialog(null, panel, "Pytanie", JOptionPane.INFORMATION_MESSAGE);
     for(int i=0; i<numOfButtons; i++) {
     	if(radios.get(i).isSelected()){
     		answer = questionOptions.get(i);
@@ -41,17 +43,72 @@ function String askQuestion(Question q){
 
 // Klasa pytania
 declare Question
+	questionName: String
 	questionText: String
+	choiceType: String
 	questionOptions: List<String>
-	choiceType: ChoiceTypes //TODO
 	answer: String
 end
 
 // Enumerator Radio/Checkbox
-declare enum ChoiceTypes
+/*declare enum ChoiceTypes
 	RADIO, CHECK;
+end*/
+
+rule "init"
+	when
+	then
+		BufferedReader br = new BufferedReader(new FileReader("src/main/resources/bazaWiedzy/english.csv"));
+		br.readLine();
+		br.lines().forEach(line -> {
+			String[] values = line.split(", ");
+			int numOfOptions = Integer.parseInt(values[3]);
+			ArrayList<String> questionOptions = new ArrayList<String>();
+			for(int i=0; i<numOfOptions; i++){
+				questionOptions.add(values[4+i]);
+			}
+			Question q = new Question(values[0], values[1], values[2], questionOptions, null);
+			insert(q);
+		});
 end
 
+rule "starting question"
+	when
+		q: Question(questionName == "starting question")
+	then
+		q.setAnswer(askQuestion(q));
+		update(q);
+end
+
+/*rule "init"
+	when
+	then
+		insert(new Question("What kind of channel do you want to watch?", Arrays.asList("Musician", "Vlogger"), ChoiceTypes.RADIO, ""));
+end
+
+rule "Musician"
+	when
+		q: Question(answer == "Musician")
+	then
+		insert(new Question("Wizard rocker or muggle musician?", Arrays.asList("Muggle", "Wizard"), ChoiceTypes.RADIO, ""));
+end
+
+rule "Muggle"
+	when
+		q: Question(answer == "Muggle")
+	then
+		insert(new Question("Is it necessary that they actually exist?", Arrays.asList("Yes", "No"), ChoiceTypes.RADIO, ""));
+end
+
+rule "Wizard"
+	when
+		q: Question(answer == "Wizard")
+	then
+		insert(new Question("Wizard rock is...", Arrays.asList("Awesome", "Kind of weird"), ChoiceTypes.RADIO, ""));
+end
+*/
+
+/*
 rule "test init"
 	when
 	then
@@ -64,7 +121,7 @@ rule "test print"
 	then
 		System.out.println(q.getChoiceType());
 end
-
+*/
 rule "test gui"
 	when
 		q: Question(answer == "")
