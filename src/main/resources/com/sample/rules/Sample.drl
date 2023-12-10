@@ -3,6 +3,9 @@ package com.sample.rules
 import java.util.*;
 import javax.swing.*;
 import java.awt.event.*;
+import java.io.*;
+
+
 
 // Funkcja zadająca pytanie i przyjmująca odpowiedź
 function String askQuestion(Question q){
@@ -40,20 +43,44 @@ function String askQuestion(Question q){
 
 // Klasa pytania
 declare Question
+	questionName: String
 	questionText: String
+	choiceType: String
 	questionOptions: List<String>
-	choiceType: ChoiceTypes //TODO
 	answer: String
 end
 
 // Enumerator Radio/Checkbox
-declare enum ChoiceTypes
+/*declare enum ChoiceTypes
 	RADIO, CHECK;
+end*/
+
+rule "init"
+	when
+	then
+		BufferedReader br = new BufferedReader(new FileReader("src/main/resources/bazaWiedzy/english.csv"));
+		br.readLine();
+		br.lines().forEach(line -> {
+			String[] values = line.split(", ");
+			int numOfOptions = Integer.parseInt(values[3]);
+			ArrayList<String> questionOptions = new ArrayList<String>();
+			for(int i=0; i<numOfOptions; i++){
+				questionOptions.add(values[4+i]);
+			}
+			Question q = new Question(values[0], values[1], values[2], questionOptions, null);
+			insert(q);
+		});
 end
 
+rule "starting question"
+	when
+		q: Question(questionName == "starting question")
+	then
+		q.setAnswer(askQuestion(q));
+		update(q);
+end
 
-// REGUŁY SZABLONOWE
-rule "init"
+/*rule "init"
 	when
 	then
 		insert(new Question("What kind of channel do you want to watch?", Arrays.asList("Musician", "Vlogger"), ChoiceTypes.RADIO, ""));
@@ -79,6 +106,7 @@ rule "Wizard"
 	then
 		insert(new Question("Wizard rock is...", Arrays.asList("Awesome", "Kind of weird"), ChoiceTypes.RADIO, ""));
 end
+*/
 
 /*
 rule "test init"
