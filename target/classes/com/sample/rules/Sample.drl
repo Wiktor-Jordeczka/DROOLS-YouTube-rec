@@ -20,24 +20,27 @@ function String askQuestion(Question q){
     JLabel L1 = new JLabel(questionText); // Treść pytania
     panel.add(L1); 
         
-    // Tworzymy Radio
-    ButtonGroup G1 = new ButtonGroup(); 
-    ArrayList<JRadioButton> radios = new ArrayList<JRadioButton>();
-    for(int i=0; i<numOfButtons; i++) {
-    	radios.add(new JRadioButton());
-    	radios.get(i).setText(questionOptions.get(i));
-    	panel.add(radios.get(i));
-    	G1.add(radios.get(i));
-    }
-    radios.get(0).setSelected(true);
     
-    // Zbieramy odpowiedź
-    JOptionPane.showMessageDialog(null, panel, "Pytanie", JOptionPane.INFORMATION_MESSAGE);
-    for(int i=0; i<numOfButtons; i++) {
-    	if(radios.get(i).isSelected()){
-    		answer = questionOptions.get(i);
-    	}
-    }
+    // Tworzymy Radio
+    if(q.getChoiceType().equals("radio")){
+	    ButtonGroup G1 = new ButtonGroup(); 
+	    ArrayList<JRadioButton> radios = new ArrayList<JRadioButton>();
+	    for(int i=0; i<numOfButtons; i++) {
+	    	radios.add(new JRadioButton());
+	    	radios.get(i).setText(questionOptions.get(i));
+	    	panel.add(radios.get(i));
+	    	G1.add(radios.get(i));
+	    }
+	    radios.get(0).setSelected(true);
+	    
+	    // Zbieramy odpowiedź
+	    JOptionPane.showMessageDialog(null, panel, "Pytanie", JOptionPane.INFORMATION_MESSAGE);
+	    for(int i=0; i<numOfButtons; i++) {
+	    	if(radios.get(i).isSelected()){
+	    		answer = questionOptions.get(i);
+	    	}
+	    }
+	}
     return answer;
 }
 
