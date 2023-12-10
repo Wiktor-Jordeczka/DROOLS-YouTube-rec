@@ -55,6 +55,7 @@ end
 	RADIO, CHECK;
 end*/
 
+// Wczytanie bazy wiedzy
 rule "init"
 	when
 	then
@@ -72,9 +73,42 @@ rule "init"
 		});
 end
 
+////////////////////
+// SZABLON REGUŁY //
+////////////////////
+rule "id pytania"
+	when
+		answered: Question(questionName == "id pytania nadrzędnego", answer == "odpowiedz na pytanie nadrzędne")
+		q: Question(questionName == "id pytania")
+	then
+		q.setAnswer(askQuestion(q));
+		update(q);
+end
+////////////////////
+////////////////////
+////////////////////
+
 rule "starting question"
 	when
 		q: Question(questionName == "starting question")
+	then
+		q.setAnswer(askQuestion(q));
+		update(q);
+end
+
+rule "musician type"
+	when
+		answered: Question(questionName == "starting question", answer == "Musician")
+		q: Question(questionName == "musician type")
+	then
+		q.setAnswer(askQuestion(q));
+		update(q);
+end
+
+rule "collab or single"
+	when
+		answered: Question(questionName == "starting question", answer == "Vlogger")
+		q: Question(questionName == "collab or single")
 	then
 		q.setAnswer(askQuestion(q));
 		update(q);
@@ -122,6 +156,7 @@ rule "test print"
 		System.out.println(q.getChoiceType());
 end
 */
+/*
 rule "test gui"
 	when
 		q: Question(answer == "")
@@ -129,3 +164,4 @@ rule "test gui"
 		q.setAnswer(askQuestion(q));
 		update(q);
 end
+*/
