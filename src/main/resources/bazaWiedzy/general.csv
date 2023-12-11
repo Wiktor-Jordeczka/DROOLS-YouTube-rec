@@ -1,0 +1,4 @@
+question id, choice type, number of choices, choice 1 id, [choice 2 id], [choice 3 id]
+starting question, radio, 2, musician, vlogger
+musician type, radio, 2, wizard, muggle
+collab or single, radio, 2, collab, single
