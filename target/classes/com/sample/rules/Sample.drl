@@ -45,6 +45,28 @@ function String askQuestion(Question q){
     return answer;
 }
 
+// Funkcja wyświetlająca rowiązanie
+function void displaySolution(Solution s){
+	JPanel panel = new JPanel(); // Tworzymy panel i layout
+	panel.setLayout(new BoxLayout(panel, BoxLayout.PAGE_AXIS)); // elementy jeden pod drugim
+    
+    String solutionText = s.getSolutionText();
+    
+    JLabel L0 = new JLabel("Kanał do obejrzenia:");
+    panel.add(L0);
+    JLabel L1 = new JLabel(solutionText); // Treść rozwiązania
+    panel.add(L1); 
+        
+    JOptionPane.showMessageDialog(null, panel, "Solution found!", JOptionPane.INFORMATION_MESSAGE);
+}
+
+// Nie działa
+/*
+query "getSolution"
+	solution : Solution(isTrue == true)
+end
+*/
+
 // Klasa pytania
 declare Question
 	questionName: String
@@ -55,18 +77,38 @@ declare Question
 	answer: String
 end
 
+// Klasa rozwiązania
+declare Solution
+	solutionName: String
+	solutionText: String
+	isTrue: Boolean
+end
+
 // Wczytanie bazy wiedzy
 rule "init"
 	when
 	then
+		// Słownik pytań i odpowiedzi
 		HashMap<String, String> resourceValues = new HashMap<String, String>();
-		BufferedReader lang = new BufferedReader(new FileReader("src/main/resources/bazaWiedzy/english.csv"));
+		BufferedReader lang = new BufferedReader(new FileReader("src/main/resources/bazaWiedzy/englishQuestions.csv"));
 		lang.readLine();
 		lang.lines().forEach(line -> {
 			String[] values = line.split(", ");
 			resourceValues.put(values[0], values[1]);
 		});
 		
+		// Słownik rozwiązań
+		HashMap<String, String> solutionValues = new HashMap<String, String>();
+		BufferedReader sol = new BufferedReader(new FileReader("src/main/resources/bazaWiedzy/englishSolutions.csv"));
+		sol.readLine();
+		sol.lines().forEach(line -> {
+			String[] values = line.split(", ");
+			solutionValues.put(values[0], values[1]);
+			Solution s = new Solution(values[0], values[1], false);
+			insert(s);
+		});
+		
+		// Wczytanie Id i odpowiadających im wartości
 		BufferedReader general = new BufferedReader(new FileReader("src/main/resources/bazaWiedzy/general.csv"));
 		general.readLine();
 		general.lines().forEach(line -> {
@@ -97,6 +139,43 @@ end
 ////////////////////
 ////////////////////
 ////////////////////
+
+////////////////////////////
+// SZABLON REGUŁY KOŃCOWEJ//
+////////////////////////////
+rule "idRozwiązania"
+	when
+		answered: Question(questionName == "idPytaniaNadrzędnego", answer == "idOdpowiedziNaPytanieNadrzędne")
+		s: Solution(solutionName == "idRozwiązania")
+	then
+		s.setIsTrue(true);
+		update(s);
+end
+////////////////////////////
+////////////////////////////
+////////////////////////////
+
+// Odczytanie rozwiązania
+rule "showSolution"
+	when
+		s: Solution(isTrue == true)
+	then
+		displaySolution(s);
+end
+
+/*
+// Odczytanie rozwiązań(a)
+rule "idRozwiązania"
+	when
+		s: Solution(isTrue == true)
+	then
+		
+end
+*/
+
+//////////////////
+// Reguły pytań //
+//////////////////
 
 rule "startingQuestion"
 	when
@@ -257,4 +336,17 @@ rule "collab or single"
 	then
 		q.setAnswer(askQuestion(q));
 		update(q);
+end
+
+////////////////////
+// REGUŁY KOŃCOWE //
+////////////////////
+
+rule "necessaryExistNo"
+	when
+		answered: Question(questionName == "necessaryExist", answer == "noExist")
+		s: Solution(solutionName == "necessaryExistNo")
+	then
+		s.setIsTrue(true);
+		update(s);
 end
