@@ -1,10 +1,25 @@
-﻿question id / answer id, value
+﻿id, value
 starting question, What kind of channel do you want to watch?
 musician, Musician
 vlogger, Vlogger
 musician type, Wizard rocker or muggle musician?
 wizard, Wizard
 muggle, Muggle
+necessary exist, Is it necessary that they actually exist?
+yes exist, Yes
+no exist, No
+lost show, Is Lost the best show ever?
+yes show, Absolutely
+no show, Not at all
+couples music, Do you like it when couples make music?
+no couples, Blech
+yes couples, Yes!
+easily offended, Are you easily offended?
+no offended, No
+yes offended, Yes
+like ukuleles, Do youreally like ukuleles?
+no ukuleles, Not really
+yes ukuleles, Heck yes!
 collab or single, Do you want a collab or a single channel?
 collab, Collab
 single, Single

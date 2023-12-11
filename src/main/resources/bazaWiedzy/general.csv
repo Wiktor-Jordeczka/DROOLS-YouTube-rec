@@ -1,4 +1,9 @@
 question id, choice type, number of choices, choice 1 id, [choice 2 id], [choice 3 id]
 starting question, radio, 2, musician, vlogger
 musician type, radio, 2, wizard, muggle
+necessary exist, radio, 2, no exist, yes exist
+lost show, radio, 2, no show, yes show
+couples music, radio, 2, no couples, yes couples
+easily offended, radio, 2, no offended, yes offended
+like ukuleles, radio, 2, no ukuleles, yes ukuleles
 collab or single, radio, 2, collab, single

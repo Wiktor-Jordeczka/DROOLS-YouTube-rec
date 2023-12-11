@@ -86,10 +86,10 @@ end
 ////////////////////
 // SZABLON REGUŁY //
 ////////////////////
-rule "id pytania"
+rule "idPytania"
 	when
-		answered: Question(questionName == "id pytania nadrzędnego", answer == "id odpowiedzi na pytanie nadrzędne")
-		q: Question(questionName == "id pytania")
+		answered: Question(questionName == "idPytaniaNadrzędnego", answer == "idOdpowiedziNaPytanieNadrzędne")
+		q: Question(questionName == "idPytania")
 	then
 		q.setAnswer(askQuestion(q));
 		update(q);
@@ -115,6 +115,51 @@ rule "musician type"
 		update(q);
 end
 
+rule "necessary exist"
+	when
+		answered: Question(questionName == "musician type", answer == "muggle")
+		q: Question(questionName == "necessary exist")
+	then
+		q.setAnswer(askQuestion(q));
+		update(q);
+end
+
+rule "lost show"
+	when
+		answered: Question(questionName == "necessary exist", answer == "yes exist")
+		q: Question(questionName == "lost show")
+	then
+		q.setAnswer(askQuestion(q));
+		update(q);
+end
+
+rule "couples music"
+	when
+		answered: Question(questionName == "lost show", answer == "no show")
+		q: Question(questionName == "couples music")
+	then
+		q.setAnswer(askQuestion(q));
+		update(q);
+end
+
+rule "easily offended"
+	when
+		answered: Question(questionName == "couples music", answer == "no couples")
+		q: Question(questionName == "easily offended")
+	then
+		q.setAnswer(askQuestion(q));
+		update(q);
+end
+
+rule "like ukuleles"
+	when
+		answered: Question(questionName == "easily offended", answer == "yes offended")
+		q: Question(questionName == "like ukuleles")
+	then
+		q.setAnswer(askQuestion(q));
+		update(q);
+end
+
 rule "collab or single"
 	when
 		answered: Question(questionName == "starting question", answer == "vlogger")
@@ -123,55 +168,3 @@ rule "collab or single"
 		q.setAnswer(askQuestion(q));
 		update(q);
 end
-
-/*rule "init"
-	when
-	then
-		insert(new Question("What kind of channel do you want to watch?", Arrays.asList("Musician", "Vlogger"), ChoiceTypes.RADIO, ""));
-end
-
-rule "Musician"
-	when
-		q: Question(answer == "Musician")
-	then
-		insert(new Question("Wizard rocker or muggle musician?", Arrays.asList("Muggle", "Wizard"), ChoiceTypes.RADIO, ""));
-end
-
-rule "Muggle"
-	when
-		q: Question(answer == "Muggle")
-	then
-		insert(new Question("Is it necessary that they actually exist?", Arrays.asList("Yes", "No"), ChoiceTypes.RADIO, ""));
-end
-
-rule "Wizard"
-	when
-		q: Question(answer == "Wizard")
-	then
-		insert(new Question("Wizard rock is...", Arrays.asList("Awesome", "Kind of weird"), ChoiceTypes.RADIO, ""));
-end
-*/
-
-/*
-rule "test init"
-	when
-	then
-		insert(new Question("What kind of channel do you want to watch?", Arrays.asList("Musician", "Vlogger"), ChoiceTypes.RADIO, ""));
-end
-
-rule "test print"
-	when
-		q: Question(choiceType == ChoiceTypes.RADIO)
-	then
-		System.out.println(q.getChoiceType());
-end
-*/
-/*
-rule "test gui"
-	when
-		q: Question(answer == "")
-	then
-		q.setAnswer(askQuestion(q));
-		update(q);
-end
-*/
