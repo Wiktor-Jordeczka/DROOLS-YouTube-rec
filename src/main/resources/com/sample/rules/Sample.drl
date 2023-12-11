@@ -98,63 +98,153 @@ end
 ////////////////////
 ////////////////////
 
-rule "starting question"
+rule "startingQuestion"
 	when
-		q: Question(questionName == "starting question")
+		q: Question(questionName == "startingQuestion")
 	then
 		q.setAnswer(askQuestion(q));
 		update(q);
 end
 
-rule "musician type"
+rule "musicianType"
 	when
-		answered: Question(questionName == "starting question", answer == "musician")
-		q: Question(questionName == "musician type")
+		answered: Question(questionName == "startingQuestion", answer == "musician")
+		q: Question(questionName == "musicianType")
 	then
 		q.setAnswer(askQuestion(q));
 		update(q);
 end
 
-rule "necessary exist"
+rule "necessaryExist"
 	when
-		answered: Question(questionName == "musician type", answer == "muggle")
-		q: Question(questionName == "necessary exist")
+		answered: Question(questionName == "musicianType", answer == "muggle")
+		q: Question(questionName == "necessaryExist")
 	then
 		q.setAnswer(askQuestion(q));
 		update(q);
 end
 
-rule "lost show"
+rule "lostShow"
 	when
-		answered: Question(questionName == "necessary exist", answer == "yes exist")
-		q: Question(questionName == "lost show")
+		answered: Question(questionName == "necessaryExist", answer == "yesExist")
+		q: Question(questionName == "lostShow")
 	then
 		q.setAnswer(askQuestion(q));
 		update(q);
 end
 
-rule "couples music"
+rule "couplesMusic"
 	when
-		answered: Question(questionName == "lost show", answer == "no show")
-		q: Question(questionName == "couples music")
+		answered: Question(questionName == "lostShow", answer == "noShow")
+		q: Question(questionName == "couplesMusic")
 	then
 		q.setAnswer(askQuestion(q));
 		update(q);
 end
 
-rule "easily offended"
+rule "easilyOffended"
 	when
-		answered: Question(questionName == "couples music", answer == "no couples")
-		q: Question(questionName == "easily offended")
+		answered: Question(questionName == "couplesMusic", answer == "noCouples")
+		q: Question(questionName == "easilyOffended")
 	then
 		q.setAnswer(askQuestion(q));
 		update(q);
 end
 
-rule "like ukuleles"
+rule "likeUkuleles"
 	when
-		answered: Question(questionName == "easily offended", answer == "yes offended")
-		q: Question(questionName == "like ukuleles")
+		answered: Question(questionName == "easilyOffended", answer == "yesOffended")
+		q: Question(questionName == "likeUkuleles")
+	then
+		q.setAnswer(askQuestion(q));
+		update(q);
+end
+
+rule "mellowOrRock"
+	when
+		answered: Question(questionName == "likeUkuleles", answer == "noUkuleles")
+		q: Question(questionName == "mellowOrRock")
+	then
+		q.setAnswer(askQuestion(q));
+		update(q);
+end
+
+rule "normalOrStrangeLyrics"
+	when
+		answered: Question(questionName == "mellowOrRock", answer == "rock")
+		q: Question(questionName == "normalOrStrangeLyrics")
+	then
+		q.setAnswer(askQuestion(q));
+		update(q);
+end
+
+rule "pianoOrGuitar"
+	when
+		answered: Question(questionName == "normalOrStrangeLyrics", answer == "normalLyrics")
+		q: Question(questionName == "pianoOrGuitar")
+	then
+		q.setAnswer(askQuestion(q));
+		update(q);
+end
+
+rule "cyrusOrRandom"
+	when
+		answered: Question(questionName == "normalOrStrangeLyrics", answer == "strangeLyrics")
+		q: Question(questionName == "cyrusOrRandom")
+	then
+		q.setAnswer(askQuestion(q));
+		update(q);
+end
+
+rule "nerdyOrNormalSongs"
+	when
+		answered: Question(questionName == "likeUkuleles", answer == "yesUkuleles")
+		q: Question(questionName == "nerdyOrNormalSongs")
+	then
+		q.setAnswer(askQuestion(q));
+		update(q);
+end
+
+rule "wizardRock"
+	when
+		answered: Question(questionName == "musicianType", answer == "wizard")
+		q: Question(questionName == "wizardRock")
+	then
+		q.setAnswer(askQuestion(q));
+		update(q);
+end
+
+rule "likeElectronica"
+	when
+		answered: Question(questionName == "couplesMusic", answer == "yesCouples")
+		q: Question(questionName == "likeElectronica")
+	then
+		q.setAnswer(askQuestion(q));
+		update(q);
+end
+
+rule "livePerformances"
+	when
+		answered: Question(questionName == "wizardRock", answer == "awesome")
+		q: Question(questionName == "livePerformances")
+	then
+		q.setAnswer(askQuestion(q));
+		update(q);
+end
+
+rule "tooCheap"
+	when
+		answered: Question(questionName == "livePerformances", answer == "noLive")
+		q: Question(questionName == "tooCheap")
+	then
+		q.setAnswer(askQuestion(q));
+		update(q);
+end
+
+rule "whompingWillow"
+	when
+		answered: Question(questionName == "tooCheap", answer == "noTooCheap")
+		q: Question(questionName == "whompingWillow")
 	then
 		q.setAnswer(askQuestion(q));
 		update(q);

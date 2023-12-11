@@ -1,25 +1,55 @@
 ﻿id, value
-starting question, What kind of channel do you want to watch?
+startingQuestion, What kind of channel do you want to watch?
 musician, Musician
 vlogger, Vlogger
-musician type, Wizard rocker or muggle musician?
+musicianType, Wizard rocker or muggle musician?
 wizard, Wizard
 muggle, Muggle
-necessary exist, Is it necessary that they actually exist?
-yes exist, Yes
-no exist, No
-lost show, Is Lost the best show ever?
-yes show, Absolutely
-no show, Not at all
-couples music, Do you like it when couples make music?
-no couples, Blech
-yes couples, Yes!
-easily offended, Are you easily offended?
-no offended, No
-yes offended, Yes
-like ukuleles, Do youreally like ukuleles?
-no ukuleles, Not really
-yes ukuleles, Heck yes!
+necessaryExist, Is it necessary that they actually exist?
+yesExist, Yes
+noExist, No
+lostShow, Is Lost the best show ever?
+yesShow, Absolutely
+noShow, Not at all
+couplesMusic, Do you like it when couples make music?
+noCouples, Blech
+yesCouples, Yes!
+easilyOffended, Are you easily offended?
+noOffended, No
+yesOffended, Yes
+likeUkuleles, Do youreally like ukuleles?
+noUkuleles, Not really
+yesUkuleles, Heck yes!
+mellowOrRock, Do you want to mellow out or rock out?
+mellow, Mellow
+rock, Rock
+normalOrStrangeLyrics, Relatively normal or strange lyrics?
+normalLyrics, Normal
+strangeLyrics, Strange
+pianoOrGuitar, Piano rock or guitar rock?
+piano, Piano
+guitar, Guitar
+cyrusOrRandom, Which is better - Miley Cyrus or randomness?
+cyrus, Miley
+random, Random
+nerdyOrNormalSongs, Do you prefer really nerdy or normal songs?
+normalSongs, Normal
+nerdySongs, Nerdy
+wizardRock, Wizard rock is...
+awesome, Awesome
+weird, Kind of weird
+likeElectronica, Do you like electronica?
+yesElectronica, Yes!
+noElectronica, No
+livePerformances, Do you only want live performances?
+yesLive, Yes
+noLive, No
+tooCheap, Are you too cheap to buy Ministry of Magic CDs?
+yesTooCheap, I'm a Weasley!
+noTooCheap, As a Malfoy, I guess not
+whimpingWillow, The Whomping Willow is awesome
+yesWillow, TRUE
+noWillow, FALSE
 collab or single, Do you want a collab or a single channel?
 collab, Collab
 single, Single

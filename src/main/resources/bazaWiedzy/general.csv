@@ -1,9 +1,19 @@
 question id, choice type, number of choices, choice 1 id, [choice 2 id], [choice 3 id]
-starting question, radio, 2, musician, vlogger
-musician type, radio, 2, wizard, muggle
-necessary exist, radio, 2, no exist, yes exist
-lost show, radio, 2, no show, yes show
-couples music, radio, 2, no couples, yes couples
-easily offended, radio, 2, no offended, yes offended
-like ukuleles, radio, 2, no ukuleles, yes ukuleles
+startingQuestion, radio, 2, musician, vlogger
+musicianType, radio, 2, wizard, muggle
+necessaryExist, radio, 2, noExist, yesExist
+lostShow, radio, 2, noShow, yesShow
+couplesMusic, radio, 2, noCouples, yesCouples
+easilyOffended, radio, 2, noOffended, yesOffended
+likeUkuleles, radio, 2, noUkuleles, yesUkuleles
+mellowOrRock, radio, 2, mellow, rock
+normalOrStrangeLyrics, radio, 2, normalLyrics, strangeLyrics
+pianoOrGuitar, radio, 2, piano, guitar
+cyrusOrRandom, radio, 2, cyrus, random
+nerdyOrNormalSongs, radio, 2, normalSongs, nerdySongs
+wizardRock, radio, 2, awesome, weird
+likeElectronica, radio, 2, yesElectronica, noElectronica
+livePerformances, radio, 2, yesLive, noLive
+tooCheap, radio, 2, yesTooCheap, noTooCheap
+whompingWillow, radio, 2, yesWillow, noWillow
 collab or single, radio, 2, collab, single
