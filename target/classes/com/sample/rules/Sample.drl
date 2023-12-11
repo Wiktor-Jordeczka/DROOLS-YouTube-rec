@@ -55,11 +55,6 @@ declare Question
 	answer: String
 end
 
-// Enumerator Radio/Checkbox
-/*declare enum ChoiceTypes
-	RADIO, CHECK;
-end*/
-
 // Wczytanie bazy wiedzy
 rule "init"
 	when
@@ -91,10 +86,10 @@ end
 ////////////////////
 // SZABLON REGUŁY //
 ////////////////////
-rule "id pytania"
+rule "idPytania"
 	when
-		answered: Question(questionName == "id pytania nadrzędnego", answer == "id odpowiedzi na pytanie nadrzędne")
-		q: Question(questionName == "id pytania")
+		answered: Question(questionName == "idPytaniaNadrzędnego", answer == "idOdpowiedziNaPytanieNadrzędne")
+		q: Question(questionName == "idPytania")
 	then
 		q.setAnswer(askQuestion(q));
 		update(q);
@@ -103,18 +98,153 @@ end
 ////////////////////
 ////////////////////
 
-rule "starting question"
+rule "startingQuestion"
 	when
-		q: Question(questionName == "starting question")
+		q: Question(questionName == "startingQuestion")
 	then
 		q.setAnswer(askQuestion(q));
 		update(q);
 end
 
-rule "musician type"
+rule "musicianType"
 	when
-		answered: Question(questionName == "starting question", answer == "musician")
-		q: Question(questionName == "musician type")
+		answered: Question(questionName == "startingQuestion", answer == "musician")
+		q: Question(questionName == "musicianType")
+	then
+		q.setAnswer(askQuestion(q));
+		update(q);
+end
+
+rule "necessaryExist"
+	when
+		answered: Question(questionName == "musicianType", answer == "muggle")
+		q: Question(questionName == "necessaryExist")
+	then
+		q.setAnswer(askQuestion(q));
+		update(q);
+end
+
+rule "lostShow"
+	when
+		answered: Question(questionName == "necessaryExist", answer == "yesExist")
+		q: Question(questionName == "lostShow")
+	then
+		q.setAnswer(askQuestion(q));
+		update(q);
+end
+
+rule "couplesMusic"
+	when
+		answered: Question(questionName == "lostShow", answer == "noShow")
+		q: Question(questionName == "couplesMusic")
+	then
+		q.setAnswer(askQuestion(q));
+		update(q);
+end
+
+rule "easilyOffended"
+	when
+		answered: Question(questionName == "couplesMusic", answer == "noCouples")
+		q: Question(questionName == "easilyOffended")
+	then
+		q.setAnswer(askQuestion(q));
+		update(q);
+end
+
+rule "likeUkuleles"
+	when
+		answered: Question(questionName == "easilyOffended", answer == "yesOffended")
+		q: Question(questionName == "likeUkuleles")
+	then
+		q.setAnswer(askQuestion(q));
+		update(q);
+end
+
+rule "mellowOrRock"
+	when
+		answered: Question(questionName == "likeUkuleles", answer == "noUkuleles")
+		q: Question(questionName == "mellowOrRock")
+	then
+		q.setAnswer(askQuestion(q));
+		update(q);
+end
+
+rule "normalOrStrangeLyrics"
+	when
+		answered: Question(questionName == "mellowOrRock", answer == "rock")
+		q: Question(questionName == "normalOrStrangeLyrics")
+	then
+		q.setAnswer(askQuestion(q));
+		update(q);
+end
+
+rule "pianoOrGuitar"
+	when
+		answered: Question(questionName == "normalOrStrangeLyrics", answer == "normalLyrics")
+		q: Question(questionName == "pianoOrGuitar")
+	then
+		q.setAnswer(askQuestion(q));
+		update(q);
+end
+
+rule "cyrusOrRandom"
+	when
+		answered: Question(questionName == "normalOrStrangeLyrics", answer == "strangeLyrics")
+		q: Question(questionName == "cyrusOrRandom")
+	then
+		q.setAnswer(askQuestion(q));
+		update(q);
+end
+
+rule "nerdyOrNormalSongs"
+	when
+		answered: Question(questionName == "likeUkuleles", answer == "yesUkuleles")
+		q: Question(questionName == "nerdyOrNormalSongs")
+	then
+		q.setAnswer(askQuestion(q));
+		update(q);
+end
+
+rule "wizardRock"
+	when
+		answered: Question(questionName == "musicianType", answer == "wizard")
+		q: Question(questionName == "wizardRock")
+	then
+		q.setAnswer(askQuestion(q));
+		update(q);
+end
+
+rule "likeElectronica"
+	when
+		answered: Question(questionName == "couplesMusic", answer == "yesCouples")
+		q: Question(questionName == "likeElectronica")
+	then
+		q.setAnswer(askQuestion(q));
+		update(q);
+end
+
+rule "livePerformances"
+	when
+		answered: Question(questionName == "wizardRock", answer == "awesome")
+		q: Question(questionName == "livePerformances")
+	then
+		q.setAnswer(askQuestion(q));
+		update(q);
+end
+
+rule "tooCheap"
+	when
+		answered: Question(questionName == "livePerformances", answer == "noLive")
+		q: Question(questionName == "tooCheap")
+	then
+		q.setAnswer(askQuestion(q));
+		update(q);
+end
+
+rule "whompingWillow"
+	when
+		answered: Question(questionName == "tooCheap", answer == "noTooCheap")
+		q: Question(questionName == "whompingWillow")
 	then
 		q.setAnswer(askQuestion(q));
 		update(q);
@@ -128,55 +258,3 @@ rule "collab or single"
 		q.setAnswer(askQuestion(q));
 		update(q);
 end
-
-/*rule "init"
-	when
-	then
-		insert(new Question("What kind of channel do you want to watch?", Arrays.asList("Musician", "Vlogger"), ChoiceTypes.RADIO, ""));
-end
-
-rule "Musician"
-	when
-		q: Question(answer == "Musician")
-	then
-		insert(new Question("Wizard rocker or muggle musician?", Arrays.asList("Muggle", "Wizard"), ChoiceTypes.RADIO, ""));
-end
-
-rule "Muggle"
-	when
-		q: Question(answer == "Muggle")
-	then
-		insert(new Question("Is it necessary that they actually exist?", Arrays.asList("Yes", "No"), ChoiceTypes.RADIO, ""));
-end
-
-rule "Wizard"
-	when
-		q: Question(answer == "Wizard")
-	then
-		insert(new Question("Wizard rock is...", Arrays.asList("Awesome", "Kind of weird"), ChoiceTypes.RADIO, ""));
-end
-*/
-
-/*
-rule "test init"
-	when
-	then
-		insert(new Question("What kind of channel do you want to watch?", Arrays.asList("Musician", "Vlogger"), ChoiceTypes.RADIO, ""));
-end
-
-rule "test print"
-	when
-		q: Question(choiceType == ChoiceTypes.RADIO)
-	then
-		System.out.println(q.getChoiceType());
-end
-*/
-/*
-rule "test gui"
-	when
-		q: Question(answer == "")
-	then
-		q.setAnswer(askQuestion(q));
-		update(q);
-end
-*/
