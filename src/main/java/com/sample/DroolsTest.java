@@ -3,6 +3,8 @@ package com.sample;
 import org.kie.api.KieServices;
 import org.kie.api.runtime.KieContainer;
 import org.kie.api.runtime.KieSession;
+import org.kie.api.runtime.rule.QueryResults;
+import org.kie.api.runtime.rule.QueryResultsRow;
 import org.kie.api.logger.*;
 
 /**
@@ -20,6 +22,15 @@ public class DroolsTest {
         	
             // go !
         	kSession.fireAllRules();
+        	
+        	/*// Nie wiem czy to ma sens skoro klasy są w .drl
+        	QueryResults results = kSession.getQueryResults( "Kanały do obejrzenia:" );
+        	for ( QueryResultsRow row : results ) {
+        	    Solution solution = ( Solution ) row.get( "solution" );
+        	    System.out.println( solution.getSolutionText() + "\n" );
+        	}
+        	*/
+        	
         	kLogger.close();
         } catch (Throwable t) {
             t.printStackTrace();
