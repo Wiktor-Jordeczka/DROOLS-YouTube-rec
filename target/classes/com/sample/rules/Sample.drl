@@ -52,7 +52,7 @@ function void displaySolution(Solution s){
     
     String solutionText = s.getSolutionText();
     
-    JLabel L0 = new JLabel("Kanał do obejrzenia:");
+    JLabel L0 = new JLabel("Channel to watch:");
     panel.add(L0);
     JLabel L1 = new JLabel(solutionText); // Treść rozwiązania
     panel.add(L1); 
@@ -93,7 +93,7 @@ rule "init"
 		BufferedReader lang = new BufferedReader(new FileReader("src/main/resources/bazaWiedzy/englishQuestions.csv"));
 		lang.readLine();
 		lang.lines().forEach(line -> {
-			String[] values = line.split(", ");
+			String[] values = line.split("; ");
 			resourceValues.put(values[0], values[1]);
 		});
 		
@@ -102,7 +102,7 @@ rule "init"
 		BufferedReader sol = new BufferedReader(new FileReader("src/main/resources/bazaWiedzy/englishSolutions.csv"));
 		sol.readLine();
 		sol.lines().forEach(line -> {
-			String[] values = line.split(", ");
+			String[] values = line.split("; ");
 			//solutionValues.put(values[0], values[1]);
 			Solution s = new Solution(values[0], values[1], false);
 			insert(s);
@@ -112,7 +112,7 @@ rule "init"
 		BufferedReader general = new BufferedReader(new FileReader("src/main/resources/bazaWiedzy/general.csv"));
 		general.readLine();
 		general.lines().forEach(line -> {
-			String[] values = line.split(", ");
+			String[] values = line.split("; ");
 			int numOfOptions = Integer.parseInt(values[2]);
 			ArrayList<String> questionOptions = new ArrayList<String>();
 			ArrayList<String> questionOptionsTexts = new ArrayList<String>();

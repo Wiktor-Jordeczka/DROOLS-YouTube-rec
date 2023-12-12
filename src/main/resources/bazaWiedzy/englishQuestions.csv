@@ -1,153 +1,153 @@
-﻿id, value
-startingQuestion, What kind of channel do you want to watch?
-musician, Musician
-vlogger, Vlogger
-musicianType, Wizard rocker or muggle musician?
-wizard, Wizard
-muggle, Muggle
-necessaryExist, Is it necessary that they actually exist?
-yesExist, Yes
-noExist, No
-lostShow, Is Lost the best show ever?
-yesShow, Absolutely
-noShow, Not at all
-couplesMusic, Do you like it when couples make music?
-noCouples, Blech
-yesCouples, Yes!
-easilyOffended, Are you easily offended?
-noOffended, No
-yesOffended, Yes
-likeUkuleles, Do youreally like ukuleles?
-noUkuleles, Not really
-yesUkuleles, Heck yes!
-mellowOrRock, Do you want to mellow out or rock out?
-mellow, Mellow
-rock, Rock
-normalOrStrangeLyrics, Relatively normal or strange lyrics?
-normalLyrics, Normal
-strangeLyrics, Strange
-pianoOrGuitar, Piano rock or guitar rock?
-piano, Piano
-guitar, Guitar
-cyrusOrRandom, Which is better - Miley Cyrus or randomness?
-cyrus, Miley
-random, Random
-nerdyOrNormalSongs, Do you prefer really nerdy or normal songs?
-normalSongs, Normal
-nerdySongs, Nerdy
-wizardRock, Wizard rock is...
-awesome, Awesome
-weird, Kind of weird
-likeElectronica, Do you like electronica?
-yesElectronica, Yes!
-noElectronica, No
-livePerformances, Do you only want live performances?
-yesLive, Yes
-noLive, No
-tooCheap, Are you too cheap to buy Ministry of Magic CDs?
-yesTooCheap, I'm a Weasley!
-noTooCheap, As a Malfoy;;;;;;; I guess not
-whompingWillow, The Whomping Willow is awesome
-yesWillow, TRUE
-noWillow, FALSE
-collabOrSingle, Do you want a collab or a single channel?
-collab, Collab
-single, Single
-newOrOldVideos, Do you want to watch new videos or two year old videos?
-new, New
-old, Old
-relationships, People in relationships make you...
-happy, Happy
-sick, Sick
-doctorWho, Are you obsessed with Doctor Who?
-yesDoctor, Absolutely
-noDoctor, What's that?
-howManyWatch, How many people do you want to watch?
-five, Five
-two, Two
-shortOrTall, Do you want to watch short or tall people?
-tall, Tall
-short, Short
-tallGirlsOrBoys, Girls or boys?
-tallGirls, Girls
-tallBoys, Boys
-whatKindOfAccent, What kind of accent do you like?
-britishAccent, British
-americanAccent, American
-otherAccent, Something else
-canadaIsCool, Canada's cool;;;;; right?
-yesCanada, YEAH!
-noCanada, Canada sucks
-whichIsFunnier, Which is funnier?
-chickenJokes, Jokes about chickens
-deprecatingHumor, Self-deprecating humor
-davidTennantAttractive, Do you find David Tennant attractive?
-yesDavid, DUH
-noDavid, No
-instrumentBoysHot, Well then;;;;;;;; Are boys who play an instrument hot?
-yesHotBoys, Yes
-noHotBoys, No
-hateTwilight, Do you hate Twilight?
-yesTwilight, Yes
-noTwilight, No
-otherTwilight, Don't care
-scriptedOrSpontaneous, Do you prefer scripted or spontaneous videos?
-spontaneous, Spontaneous
-scripted, Scripted
-singSometimesOrNever, Someone who sometimes sings or never sings?
-sometimes, Sometimes sings
-never, Never sings
-dailyVideos, Do you want daily videos?
-yesDaily, Yes
-noDaily, No
-needAdvice, Do you need advice?
-yesAdvice, Yes;;;;;;; please
-noAdvice, No
-likePeoplePlay, Do you like seeing people play different versions of themselves?
-yesPlay, Yes
-noPlay, No;;;; that's weird
-howManySubscribers, How many subscribers do you prefer they have?
-lessSubscribers, Less than 100 000
-moreSubscribers, More than 100 000
-wantToWatch, Do you want to watch someone...
-worldIssues, Talk world issues
-rant, Rant and be adorable
-makeUp, Put on make-up
-typographyIsCool, Typography is cool
-yesTypography, Agreed.
-noTypography, What's typography?
-fiveAwesomes, Do you only watch FiveAwesomes?
-yesFiveAwesomes, Yes
-noFiveAwesomes, Who are they?
-awesomeGirlsOrBoys, Girls or boys?
-awesomeGirls, Girls
-awesomeBoys, Boys
-youArePicky, You sure are picky
-yesPicky, Yup
-likeRapping, Do you like rapping?
-yesRapping, Yes
-noRapping, No
-likeBreakfastSongs, Do you only like songs about breakfast
-yesBreakfast, Of course
-noBreakfast, Um;;;; no
-likeChartsGraphs, Do you really like charts and graphs?
-yesCharts, Yes!
-noCharts, Not really
-loveAllCaps, DO YOU LOVE ALL CAPS?
-yesLoveCaps, YES
-noLoveCaps, Not my style
-girlsOrBoysRule, Do girls or boys rule?
-girlsRule, Girls!
-boysRule, Boys!
-insistFiveAwesomeGirl, Do you insist on watching a FiveAwesomeGirl?
-yesInsist, Yes
-noInsist, No
-likeReallyHappy, Do you like really;;;;; really happy people?
-yesLikeHappy, =D
-noLikeHappy, =(
-talkSlowOrFast, When not singing;;;; you want your vlogger to...
-talkFast, Talk fast
-talkSlow, Talk slow
-preferReview, You prefer your vlogger to review...
-reviewTech, Technology
-reviewBooks, Books
+﻿id; value
+startingQuestion; What kind of channel do you want to watch?
+musician; Musician
+vlogger; Vlogger
+musicianType; Wizard rocker or muggle musician?
+wizard; Wizard
+muggle; Muggle
+necessaryExist; Is it necessary that they actually exist?
+yesExist; Yes
+noExist; No
+lostShow; Is Lost the best show ever?
+yesShow; Absolutely
+noShow; Not at all
+couplesMusic; Do you like it when couples make music?
+noCouples; Blech
+yesCouples; Yes!
+easilyOffended; Are you easily offended?
+noOffended; No
+yesOffended; Yes
+likeUkuleles; Do youreally like ukuleles?
+noUkuleles; Not really
+yesUkuleles; Heck yes!
+mellowOrRock; Do you want to mellow out or rock out?
+mellow; Mellow
+rock; Rock
+normalOrStrangeLyrics; Relatively normal or strange lyrics?
+normalLyrics; Normal
+strangeLyrics; Strange
+pianoOrGuitar; Piano rock or guitar rock?
+piano; Piano
+guitar; Guitar
+cyrusOrRandom; Which is better - Miley Cyrus or randomness?
+cyrus; Miley
+random; Random
+nerdyOrNormalSongs; Do you prefer really nerdy or normal songs?
+normalSongs; Normal
+nerdySongs; Nerdy
+wizardRock; Wizard rock is...
+awesome; Awesome
+weird; Kind of weird
+likeElectronica; Do you like electronica?
+yesElectronica; Yes!
+noElectronica; No
+livePerformances; Do you only want live performances?
+yesLive; Yes
+noLive; No
+tooCheap; Are you too cheap to buy Ministry of Magic CDs?
+yesTooCheap; I'm a Weasley!
+noTooCheap; As a Malfoy, I guess not
+whompingWillow; The Whomping Willow is awesome
+yesWillow; TRUE
+noWillow; FALSE
+collabOrSingle; Do you want a collab or a single channel?
+collab; Collab
+single; Single
+newOrOldVideos; Do you want to watch new videos or two year old videos?
+new; New
+old; Old
+relationships; People in relationships make you...
+happy; Happy
+sick; Sick
+doctorWho; Are you obsessed with Doctor Who?
+yesDoctor; Absolutely
+noDoctor; What's that?
+howManyWatch; How many people do you want to watch?
+five; Five
+two; Two
+shortOrTall; Do you want to watch short or tall people?
+tall; Tall
+short; Short
+tallGirlsOrBoys; Girls or boys?
+tallGirls; Girls
+tallBoys; Boys
+whatKindOfAccent; What kind of accent do you like?
+britishAccent; British
+americanAccent; American
+otherAccent; Something else
+canadaIsCool; Canada's cool, right?
+yesCanada; YEAH!
+noCanada; Canada sucks
+whichIsFunnier; Which is funnier?
+chickenJokes; Jokes about chickens
+deprecatingHumor; Self-deprecating humor
+davidTennantAttractive; Do you find David Tennant attractive?
+yesDavid; DUH
+noDavid; No
+instrumentBoysHot; Well then, Are boys who play an instrument hot?
+yesHotBoys; Yes
+noHotBoys; No
+hateTwilight; Do you hate Twilight?
+yesTwilight; Yes
+noTwilight; No
+otherTwilight; Don't care
+scriptedOrSpontaneous; Do you prefer scripted or spontaneous videos?
+spontaneous; Spontaneous
+scripted; Scripted
+singSometimesOrNever; Someone who sometimes sings or never sings?
+sometimes; Sometimes sings
+never; Never sings
+dailyVideos; Do you want daily videos?
+yesDaily; Yes
+noDaily; No
+needAdvice; Do you need advice?
+yesAdvice; Yes, please
+noAdvice; No
+likePeoplePlay; Do you like seeing people play different versions of themselves?
+yesPlay; Yes
+noPlay; No, that's weird
+howManySubscribers; How many subscribers do you prefer they have?
+lessSubscribers; Less than 100 000
+moreSubscribers; More than 100 000
+wantToWatch; Do you want to watch someone...
+worldIssues; Talk world issues
+rant; Rant and be adorable
+makeUp; Put on make-up
+typographyIsCool; Typography is cool
+yesTypography; Agreed.
+noTypography; What's typography?
+fiveAwesomes; Do you only watch FiveAwesomes?
+yesFiveAwesomes; Yes
+noFiveAwesomes; Who are they?
+awesomeGirlsOrBoys; Girls or boys?
+awesomeGirls; Girls
+awesomeBoys; Boys
+youArePicky; You sure are picky
+yesPicky; Yup
+likeRapping; Do you like rapping?
+yesRapping; Yes
+noRapping; No
+likeBreakfastSongs; Do you only like songs about breakfast
+yesBreakfast; Of course
+noBreakfast; Um, no
+likeChartsGraphs; Do you really like charts and graphs?
+yesCharts; Yes!
+noCharts; Not really
+loveAllCaps; DO YOU LOVE ALL CAPS?
+yesLoveCaps; YES
+noLoveCaps; Not my style
+girlsOrBoysRule; Do girls or boys rule?
+girlsRule; Girls!
+boysRule; Boys!
+insistFiveAwesomeGirl; Do you insist on watching a FiveAwesomeGirl?
+yesInsist; Yes
+noInsist; No
+likeReallyHappy; Do you like really, really happy people?
+yesLikeHappy; =D
+noLikeHappy; =(
+talkSlowOrFast; When not singing, you want your vlogger to...
+talkFast; Talk fast
+talkSlow; Talk slow
+preferReview; You prefer your vlogger to review...
+reviewTech; Technology
+reviewBooks; Books
