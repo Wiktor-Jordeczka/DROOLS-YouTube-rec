@@ -453,6 +453,168 @@ rule "scriptedOrSpontaneous"
 		update(q);
 end
 
+rule "singSometimesOrNever"
+	when
+		answered: Question(questionName == "whatKindOfAccent", answer == "americanAccent")
+		q: Question(questionName == "singSometimesOrNever")
+	then
+		q.setAnswer(askQuestion(q));
+		update(q);
+end
+
+rule "dailyVideos"
+	when
+		answered: Question(questionName == "singSometimesOrNever", answer == "never")
+		q: Question(questionName == "dailyVideos")
+	then
+		q.setAnswer(askQuestion(q));
+		update(q);
+end
+
+rule "needAdvice"
+	when
+		answered: Question(questionName == "dailyVideos", answer == "noDaily")
+		q: Question(questionName == "needAdvice")
+	then
+		q.setAnswer(askQuestion(q));
+		update(q);
+end
+
+rule "likePeoplePlay"
+	when
+		answered: Question(questionName == "needAdvice", answer == "noAdvice")
+		q: Question(questionName == "likePeoplePlay")
+	then
+		q.setAnswer(askQuestion(q));
+		update(q);
+end
+
+rule "howManySubscribers"
+	when
+		answered: Question(questionName == "likePeoplePlay", answer == "noPlay")
+		q: Question(questionName == "howManySubscribers")
+	then
+		q.setAnswer(askQuestion(q));
+		update(q);
+end
+
+rule "wantToWatch"
+	when
+		answered: Question(questionName == "howManySubscribers", answer == "moreSubscribers")
+		q: Question(questionName == "wantToWatch")
+	then
+		q.setAnswer(askQuestion(q));
+		update(q);
+end
+
+rule "typographyIsCool"
+	when
+		answered: Question(questionName == "howManySubscribers", answer == "lessSubscribers")
+		q: Question(questionName == "typographyIsCool")
+	then
+		q.setAnswer(askQuestion(q));
+		update(q);
+end
+
+rule "fiveAwesomes"
+	when
+		answered: Question(questionName == "typographyIsCool", answer == "noTypography")
+		q: Question(questionName == "fiveAwesomes")
+	then
+		q.setAnswer(askQuestion(q));
+		update(q);
+end
+
+rule "awesomeGirlsOrBoys"
+	when
+		answered: Question(questionName == "fiveAwesomes", answer == "yesfiveAwesomes")
+		q: Question(questionName == "awesomeGirlsOrBoys")
+	then
+		q.setAnswer(askQuestion(q));
+		update(q);
+end
+
+rule "youArePicky"
+	when
+		answered: Question(questionName == "fiveAwesomes", answer == "nofiveAwesomes")
+		q: Question(questionName == "youArePicky")
+	then
+		q.setAnswer(askQuestion(q));
+		update(q);
+end
+
+rule "idPytania"
+	when
+		answered: Question(questionName == "idPytaniaNadrzędnego", answer == "idOdpowiedziNaPytanieNadrzędne")
+		q: Question(questionName == "idPytania")
+	then
+		q.setAnswer(askQuestion(q));
+		update(q);
+end
+
+rule "idPytania"
+	when
+		answered: Question(questionName == "idPytaniaNadrzędnego", answer == "idOdpowiedziNaPytanieNadrzędne")
+		q: Question(questionName == "idPytania")
+	then
+		q.setAnswer(askQuestion(q));
+		update(q);
+end
+
+rule "idPytania"
+	when
+		answered: Question(questionName == "idPytaniaNadrzędnego", answer == "idOdpowiedziNaPytanieNadrzędne")
+		q: Question(questionName == "idPytania")
+	then
+		q.setAnswer(askQuestion(q));
+		update(q);
+end
+
+rule "idPytania"
+	when
+		answered: Question(questionName == "idPytaniaNadrzędnego", answer == "idOdpowiedziNaPytanieNadrzędne")
+		q: Question(questionName == "idPytania")
+	then
+		q.setAnswer(askQuestion(q));
+		update(q);
+end
+
+rule "idPytania"
+	when
+		answered: Question(questionName == "idPytaniaNadrzędnego", answer == "idOdpowiedziNaPytanieNadrzędne")
+		q: Question(questionName == "idPytania")
+	then
+		q.setAnswer(askQuestion(q));
+		update(q);
+end
+
+rule "idPytania"
+	when
+		answered: Question(questionName == "idPytaniaNadrzędnego", answer == "idOdpowiedziNaPytanieNadrzędne")
+		q: Question(questionName == "idPytania")
+	then
+		q.setAnswer(askQuestion(q));
+		update(q);
+end
+
+rule "idPytania"
+	when
+		answered: Question(questionName == "idPytaniaNadrzędnego", answer == "idOdpowiedziNaPytanieNadrzędne")
+		q: Question(questionName == "idPytania")
+	then
+		q.setAnswer(askQuestion(q));
+		update(q);
+end
+
+rule "idPytania"
+	when
+		answered: Question(questionName == "idPytaniaNadrzędnego", answer == "idOdpowiedziNaPytanieNadrzędne")
+		q: Question(questionName == "idPytania")
+	then
+		q.setAnswer(askQuestion(q));
+		update(q);
+end
+
 
 
 
