@@ -52,7 +52,7 @@ function void displaySolution(Solution s){
     
     String solutionText = s.getSolutionText();
     
-    JLabel L0 = new JLabel("Kanał do obejrzenia:");
+    JLabel L0 = new JLabel("Channel to watch:");
     panel.add(L0);
     JLabel L1 = new JLabel(solutionText); // Treść rozwiązania
     panel.add(L1); 
