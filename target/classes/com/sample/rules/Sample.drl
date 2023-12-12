@@ -453,121 +453,176 @@ rule "scriptedOrSpontaneous"
 		update(q);
 end
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+rule "singSometimesOrNever"
+	when
+		answered: Question(questionName == "whatKindOfAccent", answer == "americanAccent")
+		q: Question(questionName == "singSometimesOrNever")
+	then
+		q.setAnswer(askQuestion(q));
+		update(q);
+end
+
+rule "dailyVideos"
+	when
+		answered: Question(questionName == "singSometimesOrNever", answer == "never")
+		q: Question(questionName == "dailyVideos")
+	then
+		q.setAnswer(askQuestion(q));
+		update(q);
+end
+
+rule "needAdvice"
+	when
+		answered: Question(questionName == "dailyVideos", answer == "noDaily")
+		q: Question(questionName == "needAdvice")
+	then
+		q.setAnswer(askQuestion(q));
+		update(q);
+end
+
+rule "likePeoplePlay"
+	when
+		answered: Question(questionName == "needAdvice", answer == "noAdvice")
+		q: Question(questionName == "likePeoplePlay")
+	then
+		q.setAnswer(askQuestion(q));
+		update(q);
+end
+
+rule "howManySubscribers"
+	when
+		answered: Question(questionName == "likePeoplePlay", answer == "noPlay")
+		q: Question(questionName == "howManySubscribers")
+	then
+		q.setAnswer(askQuestion(q));
+		update(q);
+end
+
+rule "wantToWatch"
+	when
+		answered: Question(questionName == "howManySubscribers", answer == "moreSubscribers")
+		q: Question(questionName == "wantToWatch")
+	then
+		q.setAnswer(askQuestion(q));
+		update(q);
+end
+
+rule "typographyIsCool"
+	when
+		answered: Question(questionName == "howManySubscribers", answer == "lessSubscribers")
+		q: Question(questionName == "typographyIsCool")
+	then
+		q.setAnswer(askQuestion(q));
+		update(q);
+end
+
+rule "fiveAwesomes"
+	when
+		answered: Question(questionName == "typographyIsCool", answer == "noTypography")
+		q: Question(questionName == "fiveAwesomes")
+	then
+		q.setAnswer(askQuestion(q));
+		update(q);
+end
+
+rule "awesomeGirlsOrBoys"
+	when
+		answered: Question(questionName == "fiveAwesomes", answer == "yesfiveAwesomes")
+		q: Question(questionName == "awesomeGirlsOrBoys")
+	then
+		q.setAnswer(askQuestion(q));
+		update(q);
+end
+
+rule "youArePicky"
+	when
+		answered: Question(questionName == "fiveAwesomes", answer == "nofiveAwesomes")
+		q: Question(questionName == "youArePicky")
+	then
+		q.setAnswer(askQuestion(q));
+		update(q);
+end
+
+rule "likeRapping"
+	when
+		answered: Question(questionName == "singSometimesOrNever", answer == "sometimes")
+		q: Question(questionName == "likeRapping")
+	then
+		q.setAnswer(askQuestion(q));
+		update(q);
+end
+
+rule "likeBreakfastSongs"
+	when
+		answered: Question(questionName == "likeRapping", answer == "noRapping")
+		q: Question(questionName == "likeBreakfastSongs")
+	then
+		q.setAnswer(askQuestion(q));
+		update(q);
+end
+
+rule "likeChartsGraphs"
+	when
+		answered: Question(questionName == "likeBreakfastSongs", answer == "noBreakfast")
+		q: Question(questionName == "likeChartsGraphs")
+	then
+		q.setAnswer(askQuestion(q));
+		update(q);
+end
+
+rule "loveAllCaps"
+	when
+		answered: Question(questionName == "likeChartsGraphs", answer == "noCharts")
+		q: Question(questionName == "loveAllCaps")
+	then
+		q.setAnswer(askQuestion(q));
+		update(q);
+end
+
+rule "girlsOrBoysRule"
+	when
+		answered: Question(questionName == "loveAllCaps", answer == "yesLoveCaps")
+		q: Question(questionName == "girlsOrBoysRule")
+	then
+		q.setAnswer(askQuestion(q));
+		update(q);
+end
+
+rule "insistFiveAwesomeGirl"
+	when
+		answered: Question(questionName == "loveAllCaps", answer == "noLoveCaps")
+		q: Question(questionName == "insistFiveAwesomeGirl")
+	then
+		q.setAnswer(askQuestion(q));
+		update(q);
+end
+
+rule "likeReallyHappy"
+	when
+		answered: Question(questionName == "insistFiveAwesomeGirl", answer == "noInsist")
+		q: Question(questionName == "likeReallyHappy")
+	then
+		q.setAnswer(askQuestion(q));
+		update(q);
+end
+
+rule "talkSlowOrFast"
+	when
+		answered: Question(questionName == "likeReallyHappy", answer == "noLikeHappy")
+		q: Question(questionName == "talkSlowOrFast")
+	then
+		q.setAnswer(askQuestion(q));
+		update(q);
+end
+
+rule "preferReview"
+	when
+		answered: Question(questionName == "talkSlowOrFast", answer == "talkSlow")
+		q: Question(questionName == "preferReview")
+	then
+		q.setAnswer(askQuestion(q));
+		update(q);
+end
 
 ////////////////////
 // REGUŁY KOŃCOWE //
