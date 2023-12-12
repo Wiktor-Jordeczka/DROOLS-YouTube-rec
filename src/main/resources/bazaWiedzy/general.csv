@@ -23,3 +23,6 @@ doctorWho, radio, 2, yesDoctor, noDoctor
 howManyWatch, radio, 2, two, five
 shortOrTall, radio, 2, tall, short
 tallGirlsOrBoys, radio, 2, tallGirls, tallBoys
+whatKindOfAccent, radio, 3, britishAccent, americanAccent, otherAccent
+canadaIsCool, radio, 2, yesCanada, noCanada
+whichIsFunnier, radio, 2, chickenJokes, deprecatingHumor

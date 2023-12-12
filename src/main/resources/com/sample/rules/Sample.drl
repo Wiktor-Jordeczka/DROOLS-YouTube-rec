@@ -128,6 +128,7 @@ end
 ////////////////////
 // SZABLON REGUŁY //
 ////////////////////
+
 rule "idPytania"
 	when
 		answered: Question(questionName == "idPytaniaNadrzędnego", answer == "idOdpowiedziNaPytanieNadrzędne")
@@ -143,6 +144,7 @@ end
 ////////////////////////////
 // SZABLON REGUŁY KOŃCOWEJ//
 ////////////////////////////
+
 rule "idRozwiązania"
 	when
 		answered: Question(questionName == "idPytaniaNadrzędnego", answer == "idOdpowiedziNaPytanieNadrzędne")
@@ -387,6 +389,74 @@ rule "tallGirlsOrBoys"
 		q.setAnswer(askQuestion(q));
 		update(q);
 end
+
+rule "whatKindOfAccent"
+	when
+		answered: Question(questionName == "collabOrSingle", answer == "single")
+		q: Question(questionName == "whatKindOfAccent")
+	then
+		q.setAnswer(askQuestion(q));
+		update(q);
+end
+
+rule "canadaIsCool"
+	when
+		answered: Question(questionName == "whatKindOfAccent", answer == "otherAccent")
+		q: Question(questionName == "canadaIsCool")
+	then
+		q.setAnswer(askQuestion(q));
+		update(q);
+end
+
+rule "whichIsFunnier"
+	when
+		answered: Question(questionName == "canadaIsCool", answer == "noCanada")
+		q: Question(questionName == "whichIsFunnier")
+	then
+		q.setAnswer(askQuestion(q));
+		update(q);
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ////////////////////
 // REGUŁY KOŃCOWE //
