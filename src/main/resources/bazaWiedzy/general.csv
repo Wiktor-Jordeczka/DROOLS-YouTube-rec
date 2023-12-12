@@ -1,51 +1,51 @@
-﻿question id, choice type, number of choices, choice 1 id, [choice 2 id], [choice 3 id]
-startingQuestion, radio, 2, musician, vlogger
-musicianType, radio, 2, wizard, muggle
-necessaryExist, radio, 2, noExist, yesExist
-lostShow, radio, 2, noShow, yesShow
-couplesMusic, radio, 2, noCouples, yesCouples
-easilyOffended, radio, 2, noOffended, yesOffended
-likeUkuleles, radio, 2, noUkuleles, yesUkuleles
-mellowOrRock, radio, 2, mellow, rock
-normalOrStrangeLyrics, radio, 2, normalLyrics, strangeLyrics
-pianoOrGuitar, radio, 2, piano, guitar
-cyrusOrRandom, radio, 2, cyrus, random
-nerdyOrNormalSongs, radio, 2, normalSongs, nerdySongs
-wizardRock, radio, 2, awesome, weird
-likeElectronica, radio, 2, yesElectronica, noElectronica
-livePerformances, radio, 2, yesLive, noLive
-tooCheap, radio, 2, yesTooCheap, noTooCheap
-whompingWillow, radio, 2, yesWillow, noWillow
-collabOrSingle, radio, 2, collab, single
-newOrOldVideos, radio, 2, new, old
-relationships, radio, 2, happy, sick
-doctorWho, radio, 2, yesDoctor, noDoctor
-howManyWatch, radio, 2, two, five
-shortOrTall, radio, 2, tall, short
-tallGirlsOrBoys, radio, 2, tallGirls, tallBoys
-whatKindOfAccent, radio, 3, britishAccent, americanAccent, otherAccent
-canadaIsCool, radio, 2, yesCanada, noCanada
-whichIsFunnier, radio, 2, chickenJokes, deprecatingHumor
-davidTennantAttractive, radio, 2, yesDavid, noDavid
-instrumentBoysHot, radio, 2, yesHotBoys, noHotBoys
-hateTwilight, radio, 3, yesTwilight, noTwilight, otherTwilight
-scriptedOrSpontaneous, radio, 2, spontaneous, scripted
-singSometimesOrNever, radio, 2, sometimes, never
-dailyVideos, radio, 2, yesDaily, noDaily
-needAdvice, radio, 2, yesAdvice, noAdvice
-likePeoplePlay, radio, 2, yesPlay, noPlay
-howManySubscribers, radio, 2, lessSubscribers, moreSubscribers
-wantToWatch, radio, 3, worldIssues, rant, makeUp
-typographyIsCool, radio, 2, yesTypography, noTypography
-fiveAwesomes, radio, 2, yesfiveAwesomes, nofiveAwesomes
-awesomeGirlsOrBoys, radio, 2, awesomeGirls, awesomeBoys
-youArePicky, radio, 1, yesPicky
-likeRapping, radio, 2, yesRapping, noRapping
-likeBreakfastSongs, radio, 2, yesBreakfast, noBreakfast
-likeChartsGraphs, radio, 2, yesCharts, noCharts
-loveAllCaps, radio, 2, yesLoveCaps, noLoveCaps
-girlsOrBoysRule, radio, 2, girlsRule, boysRule
-insistFiveAwesomeGirl, radio, 2, yesInsist, noInsist
-likeReallyHappy, radio, 2, yesLikeHappy, noLikeHappy
-talkSlowOrFast, radio, 2, talkFast, talkSlow
-preferReview, radio, 2, reviewTech, reviewBooks
+﻿question id; choice type; number of choices; choice 1 id; [choice 2 id]; [choice 3 id]
+startingQuestion; radio; 2; musician; vlogger
+musicianType; radio; 2; wizard; muggle
+necessaryExist; radio; 2; noExist; yesExist
+lostShow; radio; 2; noShow; yesShow
+couplesMusic; radio; 2; noCouples; yesCouples
+easilyOffended; radio; 2; noOffended; yesOffended
+likeUkuleles; radio; 2; noUkuleles; yesUkuleles
+mellowOrRock; radio; 2; mellow; rock
+normalOrStrangeLyrics; radio; 2; normalLyrics; strangeLyrics
+pianoOrGuitar; radio; 2; piano; guitar
+cyrusOrRandom; radio; 2; cyrus; random
+nerdyOrNormalSongs; radio; 2; normalSongs; nerdySongs
+wizardRock; radio; 2; awesome; weird
+likeElectronica; radio; 2; yesElectronica; noElectronica
+livePerformances; radio; 2; yesLive; noLive
+tooCheap; radio; 2; yesTooCheap; noTooCheap
+whompingWillow; radio; 2; yesWillow; noWillow
+collabOrSingle; radio; 2; collab; single
+newOrOldVideos; radio; 2; new; old
+relationships; radio; 2; happy; sick
+doctorWho; radio; 2; yesDoctor; noDoctor
+howManyWatch; radio; 2; two; five
+shortOrTall; radio; 2; tall; short
+tallGirlsOrBoys; radio; 2; tallGirls; tallBoys
+whatKindOfAccent; radio; 3; britishAccent; americanAccent; otherAccent
+canadaIsCool; radio; 2; yesCanada; noCanada
+whichIsFunnier; radio; 2; chickenJokes; deprecatingHumor
+davidTennantAttractive; radio; 2; yesDavid; noDavid
+instrumentBoysHot; radio; 2; yesHotBoys; noHotBoys
+hateTwilight; radio; 3; yesTwilight; noTwilight; otherTwilight
+scriptedOrSpontaneous; radio; 2; spontaneous; scripted
+singSometimesOrNever; radio; 2; sometimes; never
+dailyVideos; radio; 2; yesDaily; noDaily
+needAdvice; radio; 2; yesAdvice; noAdvice
+likePeoplePlay; radio; 2; yesPlay; noPlay
+howManySubscribers; radio; 2; lessSubscribers; moreSubscribers
+wantToWatch; radio; 3; worldIssues; rant; makeUp
+typographyIsCool; radio; 2; yesTypography; noTypography
+fiveAwesomes; radio; 2; yesfiveAwesomes; nofiveAwesomes
+awesomeGirlsOrBoys; radio; 2; awesomeGirls; awesomeBoys
+youArePicky; radio; 1; yesPicky
+likeRapping; radio; 2; yesRapping; noRapping
+likeBreakfastSongs; radio; 2; yesBreakfast; noBreakfast
+likeChartsGraphs; radio; 2; yesCharts; noCharts
+loveAllCaps; radio; 2; yesLoveCaps; noLoveCaps
+girlsOrBoysRule; radio; 2; girlsRule; boysRule
+insistFiveAwesomeGirl; radio; 2; yesInsist; noInsist
+likeReallyHappy; radio; 2; yesLikeHappy; noLikeHappy
+talkSlowOrFast; radio; 2; talkFast; talkSlow
+preferReview; radio; 2; reviewTech; reviewBooks
