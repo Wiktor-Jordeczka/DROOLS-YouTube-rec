@@ -98,12 +98,12 @@ rule "init"
 		});
 		
 		// Słownik rozwiązań
-		HashMap<String, String> solutionValues = new HashMap<String, String>();
+		//HashMap<String, String> solutionValues = new HashMap<String, String>();
 		BufferedReader sol = new BufferedReader(new FileReader("src/main/resources/bazaWiedzy/englishSolutions.csv"));
 		sol.readLine();
 		sol.lines().forEach(line -> {
 			String[] values = line.split(", ");
-			solutionValues.put(values[0], values[1]);
+			//solutionValues.put(values[0], values[1]);
 			Solution s = new Solution(values[0], values[1], false);
 			insert(s);
 		});
@@ -166,6 +166,8 @@ end
 //////////////////
 // Reguły pytań //
 //////////////////
+
+// MUSICIAN //
 
 rule "startingQuestion"
 	when
@@ -319,10 +321,68 @@ rule "whompingWillow"
 		update(q);
 end
 
-rule "collab or single"
+/////////////
+// VLOGGER //
+/////////////
+
+rule "collabOrSingle"
 	when
-		answered: Question(questionName == "starting question", answer == "vlogger")
-		q: Question(questionName == "collab or single")
+		answered: Question(questionName == "startingQuestion", answer == "vlogger")
+		q: Question(questionName == "collabOrSingle")
+	then
+		q.setAnswer(askQuestion(q));
+		update(q);
+end
+
+rule "newOrOldVideos"
+	when
+		answered: Question(questionName == "collabOrSingle", answer == "collab")
+		q: Question(questionName == "newOrOldVideos")
+	then
+		q.setAnswer(askQuestion(q));
+		update(q);
+end
+
+rule "relationships"
+	when
+		answered: Question(questionName == "newOrOldVideos", answer == "new")
+		q: Question(questionName == "relationships")
+	then
+		q.setAnswer(askQuestion(q));
+		update(q);
+end
+
+rule "doctorWho"
+	when
+		answered: Question(questionName == "relationships", answer == "sick")
+		q: Question(questionName == "doctorWho")
+	then
+		q.setAnswer(askQuestion(q));
+		update(q);
+end
+
+rule "howManyWatch"
+	when
+		answered: Question(questionName == "doctorWho", answer == "noDoctor")
+		q: Question(questionName == "howManyWatch")
+	then
+		q.setAnswer(askQuestion(q));
+		update(q);
+end
+
+rule "shortOrTall"
+	when
+		answered: Question(questionName == "howManyWatch", answer == "two")
+		q: Question(questionName == "shortOrTall")
+	then
+		q.setAnswer(askQuestion(q));
+		update(q);
+end
+
+rule "tallGirlsOrBoys"
+	when
+		answered: Question(questionName == "shortOrTall", answer == "tall")
+		q: Question(questionName == "tallGirlsOrBoys")
 	then
 		q.setAnswer(askQuestion(q));
 		update(q);
@@ -331,6 +391,8 @@ end
 ////////////////////
 // REGUŁY KOŃCOWE //
 ////////////////////
+
+// MUSICIAN //
 
 rule "necessaryExistNo"
 	when
@@ -484,3 +546,7 @@ rule "whompingWillowNo"
 		s.setIsTrue(true);
 		update(s);
 end
+
+/////////////
+// VLOGGER //
+/////////////
