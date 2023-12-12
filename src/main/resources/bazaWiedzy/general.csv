@@ -37,7 +37,7 @@ likePeoplePlay; radio; 2; yesPlay; noPlay
 howManySubscribers; radio; 2; lessSubscribers; moreSubscribers
 wantToWatch; radio; 3; worldIssues; rant; makeUp
 typographyIsCool; radio; 2; yesTypography; noTypography
-fiveAwesomes; radio; 2; yesfiveAwesomes; nofiveAwesomes
+fiveAwesomes; radio; 2; yesFiveAwesomes; noFiveAwesomes
 awesomeGirlsOrBoys; radio; 2; awesomeGirls; awesomeBoys
 youArePicky; radio; 1; yesPicky
 likeRapping; radio; 2; yesRapping; noRapping
