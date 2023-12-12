@@ -48,4 +48,4 @@ girlsOrBoysRule, radio, 2, girlsRule, boysRule
 insistFiveAwesomeGirl, radio, 2, yesInsist, noInsist
 likeReallyHappy, radio, 2, yesLikeHappy, noLikeHappy
 talkSlowOrFast, radio, 2, talkFast, talkSlow
-preferReview, radio, 2, reviewtech, reviewBooks
+preferReview, radio, 2, reviewTech, reviewBooks
