@@ -569,7 +569,6 @@ end
 
 
 
-
 ////////////////////
 // REGUŁY KOŃCOWE //
 ////////////////////
@@ -818,6 +817,60 @@ rule "whichIsFunnierDeprecating"
 	when
 		answered: Question(questionName == "whichIsFunnier", answer == "deprecatingHumor")
 		s: Solution(solutionName == "whichIsFunnierDeprecating")
+	then
+		s.setIsTrue(true);
+		update(s);
+end
+
+rule "davidTennantAttractiveYes"
+	when
+		answered: Question(questionName == "davidTennantAttractive", answer == "yesDavid")
+		s: Solution(solutionName == "davidTennantAttractiveYes")
+	then
+		s.setIsTrue(true);
+		update(s);
+end
+
+rule "hateTwilightYes"
+	when
+		answered: Question(questionName == "hateTwilight", answer == "yesTwilight")
+		s: Solution(solutionName == "hateTwilightYes")
+	then
+		s.setIsTrue(true);
+		update(s);
+end
+
+rule "hateTwilightNo"
+	when
+		answered: Question(questionName == "hateTwilight", answer == "noTwilight")
+		s: Solution(solutionName == "hateTwilightNo")
+	then
+		s.setIsTrue(true);
+		update(s);
+end
+
+rule "hateTwilightOther"
+	when
+		answered: Question(questionName == "hateTwilight", answer == "otherTwilight")
+		s: Solution(solutionName == "hateTwilightOther")
+	then
+		s.setIsTrue(true);
+		update(s);
+end
+
+rule "scriptedOrSpontaneousSpontaneous"
+	when
+		answered: Question(questionName == "scriptedOrSpontaneous", answer == "spontaneous")
+		s: Solution(solutionName == "scriptedOrSpontaneousSpontaneous")
+	then
+		s.setIsTrue(true);
+		update(s);
+end
+
+rule "scriptedOrSpontaneousScripted"
+	when
+		answered: Question(questionName == "scriptedOrSpontaneous", answer == "scripted")
+		s: Solution(solutionName == "scriptedOrSpontaneousScripted")
 	then
 		s.setIsTrue(true);
 		update(s);
