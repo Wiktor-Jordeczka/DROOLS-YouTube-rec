@@ -683,3 +683,30 @@ rule "tallGirlsOrBoysBoys"
 		s.setIsTrue(true);
 		update(s);
 end
+
+rule "canadaIsCoolYes"
+	when
+		answered: Question(questionName == "canadaIsCool", answer == "yesCanada")
+		s: Solution(solutionName == "canadaIsCoolYes")
+	then
+		s.setIsTrue(true);
+		update(s);
+end
+
+rule "whichIsFunnierChicken"
+	when
+		answered: Question(questionName == "whichIsFunnier", answer == "chickenJokes")
+		s: Solution(solutionName == "whichIsFunnierChicken")
+	then
+		s.setIsTrue(true);
+		update(s);
+end
+
+rule "whichIsFunnierDeprecating"
+	when
+		answered: Question(questionName == "whichIsFunnier", answer == "deprecatingHumor")
+		s: Solution(solutionName == "whichIsFunnierDeprecating")
+	then
+		s.setIsTrue(true);
+		update(s);
+end
