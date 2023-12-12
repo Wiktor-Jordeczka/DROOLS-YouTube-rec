@@ -417,6 +417,118 @@ rule "whichIsFunnier"
 		update(q);
 end
 
+rule "davidTennantAttractive"
+	when
+		answered: Question(questionName == "whatKindOfAccent", answer == "britishAccent")
+		q: Question(questionName == "davidTennantAttractive")
+	then
+		q.setAnswer(askQuestion(q));
+		update(q);
+end
+
+rule "instrumentBoysHot"
+	when
+		answered: Question(questionName == "davidTennantAttractive", answer == "noDavid")
+		q: Question(questionName == "instrumentBoysHot")
+	then
+		q.setAnswer(askQuestion(q));
+		update(q);
+end
+
+rule "hateTwilight"
+	when
+		answered: Question(questionName == "instrumentBoysHot", answer == "yesHotBoys")
+		q: Question(questionName == "hateTwilight")
+	then
+		q.setAnswer(askQuestion(q));
+		update(q);
+end
+
+rule "scriptedOrSpontaneous"
+	when
+		answered: Question(questionName == "instrumentBoysHot", answer == "noHotBoys")
+		q: Question(questionName == "scriptedOrSpontaneous")
+	then
+		q.setAnswer(askQuestion(q));
+		update(q);
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
