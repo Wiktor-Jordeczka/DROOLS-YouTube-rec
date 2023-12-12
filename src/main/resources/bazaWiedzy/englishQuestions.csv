@@ -46,7 +46,7 @@ yesLive, Yes
 noLive, No
 tooCheap, Are you too cheap to buy Ministry of Magic CDs?
 yesTooCheap, I'm a Weasley!
-noTooCheap, As a Malfoy I guess not
+noTooCheap, As a Malfoy;;;;;;; I guess not
 whompingWillow, The Whomping Willow is awesome
 yesWillow, TRUE
 noWillow, FALSE
@@ -71,3 +71,42 @@ short, Short
 tallGirlsOrBoys, Girls or boys?
 tallGirls, Girls
 tallBoys, Boys
+whatKindOfAccent, What kind of accent do you like?
+britishAccent, British
+americanAccent, American
+otherAccent, Something else
+canadaIsCool, Canada's cool;;;;; right?
+yesCanada, YEAH!
+noCanada, Canada sucks
+whichIsFunnier, Which is funnier?
+chickenJokes, Jokes about chickens
+deprecatingHumor, Self-deprecating humor
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
