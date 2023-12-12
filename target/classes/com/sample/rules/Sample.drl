@@ -527,7 +527,7 @@ end
 
 rule "awesomeGirlsOrBoys"
 	when
-		answered: Question(questionName == "fiveAwesomes", answer == "yesfiveAwesomes")
+		answered: Question(questionName == "fiveAwesomes", answer == "yesFiveAwesomes")
 		q: Question(questionName == "awesomeGirlsOrBoys")
 	then
 		q.setAnswer(askQuestion(q));
@@ -536,7 +536,7 @@ end
 
 rule "youArePicky"
 	when
-		answered: Question(questionName == "fiveAwesomes", answer == "nofiveAwesomes")
+		answered: Question(questionName == "fiveAwesomes", answer == "noFiveAwesomes")
 		q: Question(questionName == "youArePicky")
 	then
 		q.setAnswer(askQuestion(q));
@@ -926,6 +926,186 @@ rule "scriptedOrSpontaneousScripted"
 	when
 		answered: Question(questionName == "scriptedOrSpontaneous", answer == "scripted")
 		s: Solution(solutionName == "scriptedOrSpontaneousScripted")
+	then
+		s.setIsTrue(true);
+		update(s);
+end
+
+rule "dailyVideosYes"
+	when
+		answered: Question(questionName == "dailyVideos", answer == "yesDaily")
+		s: Solution(solutionName == "dailyVideosYes")
+	then
+		s.setIsTrue(true);
+		update(s);
+end
+
+rule "needAdviceYes"
+	when
+		answered: Question(questionName == "needAdvice", answer == "yesAdvice")
+		s: Solution(solutionName == "needAdviceYes")
+	then
+		s.setIsTrue(true);
+		update(s);
+end
+
+rule "likePeoplePlayYes"
+	when
+		answered: Question(questionName == "likePeoplePlay", answer == "yesPlay")
+		s: Solution(solutionName == "likePeoplePlayYes")
+	then
+		s.setIsTrue(true);
+		update(s);
+end
+
+rule "wantToWatchWorldIssues"
+	when
+		answered: Question(questionName == "wantToWatch", answer == "worldIssues")
+		s: Solution(solutionName == "wantToWatchWorldIssues")
+	then
+		s.setIsTrue(true);
+		update(s);
+end
+
+rule "wantToWatchRant"
+	when
+		answered: Question(questionName == "wantToWatch", answer == "rant")
+		s: Solution(solutionName == "wantToWatchRant")
+	then
+		s.setIsTrue(true);
+		update(s);
+end
+
+rule "wantToWatchMakeUp"
+	when
+		answered: Question(questionName == "wantToWatch", answer == "makeUp")
+		s: Solution(solutionName == "wantToWatchMakeUp")
+	then
+		s.setIsTrue(true);
+		update(s);
+end
+
+rule "typographyIsCoolYes"
+	when
+		answered: Question(questionName == "typographyIsCool", answer == "yesTypography")
+		s: Solution(solutionName == "typographyIsCoolYes")
+	then
+		s.setIsTrue(true);
+		update(s);
+end
+
+rule "fiveAwesomesNo"
+	when
+		answered: Question(questionName == "fiveAwesomes", answer == "noFiveAwesomes")
+		s: Solution(solutionName == "fiveAwesomesNo")
+	then
+		s.setIsTrue(true);
+		update(s);
+end
+
+rule "awesomeGirlsOrBoysGirls"
+	when
+		answered: Question(questionName == "awesomeGirlsOrBoys", answer == "awesomeGirls")
+		s: Solution(solutionName == "awesomeGirlsOrBoysGirls")
+	then
+		s.setIsTrue(true);
+		update(s);
+end
+
+rule "awesomeGirlsOrBoysBoys"
+	when
+		answered: Question(questionName == "awesomeGirlsOrBoys", answer == "awesomeBoys")
+		s: Solution(solutionName == "awesomeGirlsOrBoysBoys")
+	then
+		s.setIsTrue(true);
+		update(s);
+end
+
+rule "likeRappingYes"
+	when
+		answered: Question(questionName == "likeRapping", answer == "yesRapping")
+		s: Solution(solutionName == "likeRappingYes")
+	then
+		s.setIsTrue(true);
+		update(s);
+end
+
+rule "likeBreakfastSongsYes"
+	when
+		answered: Question(questionName == "likeBreakfastSongs", answer == "yesBreakfast")
+		s: Solution(solutionName == "likeBreakfastSongsYes")
+	then
+		s.setIsTrue(true);
+		update(s);
+end
+
+rule "likeChartsGraphsYes"
+	when
+		answered: Question(questionName == "likeChartsGraphs", answer == "yesCharts")
+		s: Solution(solutionName == "likeChartsGraphsYes")
+	then
+		s.setIsTrue(true);
+		update(s);
+end
+
+rule "girlsOrBoysRuleGirls"
+	when
+		answered: Question(questionName == "girlsOrBoysRule", answer == "girlsRule")
+		s: Solution(solutionName == "girlsOrBoysRuleGirls")
+	then
+		s.setIsTrue(true);
+		update(s);
+end
+
+rule "girlsOrBoysRuleBoys"
+	when
+		answered: Question(questionName == "girlsOrBoysRule", answer == "boysRule")
+		s: Solution(solutionName == "girlsOrBoysRuleBoys")
+	then
+		s.setIsTrue(true);
+		update(s);
+end
+
+rule "insistFiveAwesomeGirlYes"
+	when
+		answered: Question(questionName == "insistFiveAwesomeGirl", answer == "yesInsist")
+		s: Solution(solutionName == "insistFiveAwesomeGirlYes")
+	then
+		s.setIsTrue(true);
+		update(s);
+end
+
+rule "likeReallyHappyYes"
+	when
+		answered: Question(questionName == "likeReallyHappy", answer == "yesLikeHappy")
+		s: Solution(solutionName == "likeReallyHappyYes")
+	then
+		s.setIsTrue(true);
+		update(s);
+end
+
+rule "talkSlowOrFastFast"
+	when
+		answered: Question(questionName == "talkSlowOrFast", answer == "talkFast")
+		s: Solution(solutionName == "talkSlowOrFastFast")
+	then
+		s.setIsTrue(true);
+		update(s);
+end
+
+rule "preferReviewTech"
+	when
+		answered: Question(questionName == "preferReview", answer == "reviewTech")
+		s: Solution(solutionName == "preferReviewTech")
+	then
+		s.setIsTrue(true);
+		update(s);
+end
+
+rule "preferReviewBooks"
+	when
+		answered: Question(questionName == "preferReview", answer == "reviewBooks")
+		s: Solution(solutionName == "preferReviewBooks")
 	then
 		s.setIsTrue(true);
 		update(s);
