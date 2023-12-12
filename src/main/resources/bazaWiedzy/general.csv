@@ -16,4 +16,10 @@ likeElectronica, radio, 2, yesElectronica, noElectronica
 livePerformances, radio, 2, yesLive, noLive
 tooCheap, radio, 2, yesTooCheap, noTooCheap
 whompingWillow, radio, 2, yesWillow, noWillow
-collab or single, radio, 2, collab, single
+collabOrSingle, radio, 2, collab, single
+newOrOldVideos, radio, 2, new, old
+relationships, radio, 2, happy, sick
+doctorWho, radio, 2, yesDoctor, noDoctor
+howManyWatch, radio, 2, two, five
+shortOrTall, radio, 2, tall, short
+tallGirlsOrBoys, radio, 2, tallGirls, tallBoys

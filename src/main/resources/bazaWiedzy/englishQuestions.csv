@@ -46,10 +46,28 @@ yesLive, Yes
 noLive, No
 tooCheap, Are you too cheap to buy Ministry of Magic CDs?
 yesTooCheap, I'm a Weasley!
-noTooCheap, As a Malfoy, I guess not
+noTooCheap, As a Malfoy I guess not
 whompingWillow, The Whomping Willow is awesome
 yesWillow, TRUE
 noWillow, FALSE
-collab or single, Do you want a collab or a single channel?
+collabOrSingle, Do you want a collab or a single channel?
 collab, Collab
 single, Single
+newOrOldVideos, Do you want to watch new videos or two year old videos?
+new, New
+old, Old
+relationships, People in relationships make you...
+happy, Happy
+sick, Sick
+doctorWho, Are you obsessed with Doctor Who?
+yesDoctor, Absolutely
+noDoctor, What's that?
+howManyWatch, How many people do you want to watch?
+five, Five
+two, Two
+shortOrTall, Do you want to watch short or tall people?
+tall, Tall
+short, Short
+tallGirlsOrBoys, Girls or boys?
+tallGirls, Girls
+tallBoys, Boys
