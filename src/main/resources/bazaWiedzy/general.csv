@@ -26,3 +26,7 @@ tallGirlsOrBoys, radio, 2, tallGirls, tallBoys
 whatKindOfAccent, radio, 3, britishAccent, americanAccent, otherAccent
 canadaIsCool, radio, 2, yesCanada, noCanada
 whichIsFunnier, radio, 2, chickenJokes, deprecatingHumor
+davidTennantAttractive, radio, 2, yesDavid, noDavid
+instrumentBoysHot, radio, 2, yesHotBoys, noHotBoys
+hateTwilight, radio, 3, yesTwilight, noTwilight, otherTwilight
+scriptedOrSpontaneous, radio, 2, spontaneous, scripted
