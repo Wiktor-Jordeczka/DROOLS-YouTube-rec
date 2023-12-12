@@ -128,6 +128,7 @@ end
 ////////////////////
 // SZABLON REGUŁY //
 ////////////////////
+
 rule "idPytania"
 	when
 		answered: Question(questionName == "idPytaniaNadrzędnego", answer == "idOdpowiedziNaPytanieNadrzędne")
@@ -143,6 +144,7 @@ end
 ////////////////////////////
 // SZABLON REGUŁY KOŃCOWEJ//
 ////////////////////////////
+
 rule "idRozwiązania"
 	when
 		answered: Question(questionName == "idPytaniaNadrzędnego", answer == "idOdpowiedziNaPytanieNadrzędne")
@@ -388,6 +390,74 @@ rule "tallGirlsOrBoys"
 		update(q);
 end
 
+rule "whatKindOfAccent"
+	when
+		answered: Question(questionName == "collabOrSingle", answer == "single")
+		q: Question(questionName == "whatKindOfAccent")
+	then
+		q.setAnswer(askQuestion(q));
+		update(q);
+end
+
+rule "canadaIsCool"
+	when
+		answered: Question(questionName == "whatKindOfAccent", answer == "otherAccent")
+		q: Question(questionName == "canadaIsCool")
+	then
+		q.setAnswer(askQuestion(q));
+		update(q);
+end
+
+rule "whichIsFunnier"
+	when
+		answered: Question(questionName == "canadaIsCool", answer == "noCanada")
+		q: Question(questionName == "whichIsFunnier")
+	then
+		q.setAnswer(askQuestion(q));
+		update(q);
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ////////////////////
 // REGUŁY KOŃCOWE //
 ////////////////////
@@ -609,6 +679,33 @@ rule "tallGirlsOrBoysBoys"
 	when
 		answered: Question(questionName == "tallGirlsOrBoys", answer == "tallBoys")
 		s: Solution(solutionName == "tallGirlsOrBoysBoys")
+	then
+		s.setIsTrue(true);
+		update(s);
+end
+
+rule "canadaIsCoolYes"
+	when
+		answered: Question(questionName == "canadaIsCool", answer == "yesCanada")
+		s: Solution(solutionName == "canadaIsCoolYes")
+	then
+		s.setIsTrue(true);
+		update(s);
+end
+
+rule "whichIsFunnierChicken"
+	when
+		answered: Question(questionName == "whichIsFunnier", answer == "chickenJokes")
+		s: Solution(solutionName == "whichIsFunnierChicken")
+	then
+		s.setIsTrue(true);
+		update(s);
+end
+
+rule "whichIsFunnierDeprecating"
+	when
+		answered: Question(questionName == "whichIsFunnier", answer == "deprecatingHumor")
+		s: Solution(solutionName == "whichIsFunnierDeprecating")
 	then
 		s.setIsTrue(true);
 		update(s);
