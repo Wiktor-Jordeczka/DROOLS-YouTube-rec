@@ -163,16 +163,6 @@ rule "showSolution"
 		displaySolution(s);
 end
 
-/*
-// Odczytanie rozwiązań(a)
-rule "idRozwiązania"
-	when
-		s: Solution(isTrue == true)
-	then
-		
-end
-*/
-
 //////////////////
 // Reguły pytań //
 //////////////////
@@ -346,6 +336,150 @@ rule "necessaryExistNo"
 	when
 		answered: Question(questionName == "necessaryExist", answer == "noExist")
 		s: Solution(solutionName == "necessaryExistNo")
+	then
+		s.setIsTrue(true);
+		update(s);
+end
+
+rule "easilyOffendedNo"
+	when
+		answered: Question(questionName == "easilyOffended", answer == "noOffended")
+		s: Solution(solutionName == "easilyOffendedNo")
+	then
+		s.setIsTrue(true);
+		update(s);
+end
+
+rule "mellowOrRockMellow"
+	when
+		answered: Question(questionName == "mellowOrRock", answer == "mellow")
+		s: Solution(solutionName == "mellowOrRockMellow")
+	then
+		s.setIsTrue(true);
+		update(s);
+end
+
+rule "pianoOrGuitarPiano"
+	when
+		answered: Question(questionName == "pianoOrGuitar", answer == "piano")
+		s: Solution(solutionName == "pianoOrGuitarPiano")
+	then
+		s.setIsTrue(true);
+		update(s);
+end
+
+rule "pianoOrGuitarGuitar"
+	when
+		answered: Question(questionName == "pianoOrGuitar", answer == "guitar")
+		s: Solution(solutionName == "pianoOrGuitarGuitar")
+	then
+		s.setIsTrue(true);
+		update(s);
+end
+
+rule "cyrusOrRandomCyrus"
+	when
+		answered: Question(questionName == "cyrusOrRandom", answer == "cyrus")
+		s: Solution(solutionName == "cyrusOrRandomCyrus")
+	then
+		s.setIsTrue(true);
+		update(s);
+end
+
+rule "cyrusOrRandomRandom"
+	when
+		answered: Question(questionName == "cyrusOrRandom", answer == "random")
+		s: Solution(solutionName == "cyrusOrRandomRandom")
+	then
+		s.setIsTrue(true);
+		update(s);
+end
+
+rule "nerdyOrNormalSongsNormal"
+	when
+		answered: Question(questionName == "nerdyOrNormalSongs", answer == "normalSongs")
+		s: Solution(solutionName == "nerdyOrNormalSongsNormal")
+	then
+		s.setIsTrue(true);
+		update(s);
+end
+
+rule "nerdyOrNormalSongsNerdy"
+	when
+		answered: Question(questionName == "nerdyOrNormalSongs", answer == "nerdySongs")
+		s: Solution(solutionName == "nerdyOrNormalSongsNerdy")
+	then
+		s.setIsTrue(true);
+		update(s);
+end
+
+rule "likeElectronicaYes"
+	when
+		answered: Question(questionName == "likeElectronica", answer == "yesElectronica")
+		s: Solution(solutionName == "likeElectronicaYes")
+	then
+		s.setIsTrue(true);
+		update(s);
+end
+
+rule "likeElectronicaNo"
+	when
+		answered: Question(questionName == "likeElectronica", answer == "noElectronica")
+		s: Solution(solutionName == "likeElectronicaNo")
+	then
+		s.setIsTrue(true);
+		update(s);
+end
+
+rule "lostShowYes"
+	when
+		answered: Question(questionName == "lostShow", answer == "yesShow")
+		s: Solution(solutionName == "lostShowYes")
+	then
+		s.setIsTrue(true);
+		update(s);
+end
+
+rule "wizardRockWeird"
+	when
+		answered: Question(questionName == "wizardRock", answer == "weird")
+		s: Solution(solutionName == "wizardRockWeird")
+	then
+		s.setIsTrue(true);
+		update(s);
+end
+
+rule "livePerformancesYes"
+	when
+		answered: Question(questionName == "livePerformances", answer == "yesLive")
+		s: Solution(solutionName == "livePerformancesYes")
+	then
+		s.setIsTrue(true);
+		update(s);
+end
+
+rule "tooCheapYes"
+	when
+		answered: Question(questionName == "tooCheap", answer == "yesTooCheap")
+		s: Solution(solutionName == "tooCheapYes")
+	then
+		s.setIsTrue(true);
+		update(s);
+end
+
+rule "whompingWillowYes"
+	when
+		answered: Question(questionName == "whompingWillow", answer == "yesWillow")
+		s: Solution(solutionName == "whompingWillowYes")
+	then
+		s.setIsTrue(true);
+		update(s);
+end
+
+rule "whompingWillowNo"
+	when
+		answered: Question(questionName == "whompingWillow", answer == "noWillow")
+		s: Solution(solutionName == "whompingWillowNo")
 	then
 		s.setIsTrue(true);
 		update(s);
