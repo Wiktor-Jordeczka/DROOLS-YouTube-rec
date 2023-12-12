@@ -543,193 +543,86 @@ rule "youArePicky"
 		update(q);
 end
 
-rule "idPytania"
+rule "likeRapping"
 	when
-		answered: Question(questionName == "idPytaniaNadrzędnego", answer == "idOdpowiedziNaPytanieNadrzędne")
-		q: Question(questionName == "idPytania")
+		answered: Question(questionName == "singSometimesOrNever", answer == "sometimes")
+		q: Question(questionName == "likeRapping")
 	then
 		q.setAnswer(askQuestion(q));
 		update(q);
 end
 
-rule "idPytania"
+rule "likeBreakfastSongs"
 	when
-		answered: Question(questionName == "idPytaniaNadrzędnego", answer == "idOdpowiedziNaPytanieNadrzędne")
-		q: Question(questionName == "idPytania")
+		answered: Question(questionName == "likeRapping", answer == "noRapping")
+		q: Question(questionName == "likeBreakfastSongs")
 	then
 		q.setAnswer(askQuestion(q));
 		update(q);
 end
 
-rule "idPytania"
+rule "likeChartsGraphs"
 	when
-		answered: Question(questionName == "idPytaniaNadrzędnego", answer == "idOdpowiedziNaPytanieNadrzędne")
-		q: Question(questionName == "idPytania")
+		answered: Question(questionName == "likeBreakfastSongs", answer == "noBreakfast")
+		q: Question(questionName == "likeChartsGraphs")
 	then
 		q.setAnswer(askQuestion(q));
 		update(q);
 end
 
-rule "idPytania"
+rule "loveAllCaps"
 	when
-		answered: Question(questionName == "idPytaniaNadrzędnego", answer == "idOdpowiedziNaPytanieNadrzędne")
-		q: Question(questionName == "idPytania")
+		answered: Question(questionName == "likeChartsGraphs", answer == "noCharts")
+		q: Question(questionName == "loveAllCaps")
 	then
 		q.setAnswer(askQuestion(q));
 		update(q);
 end
 
-rule "idPytania"
+rule "girlsOrBoysRule"
 	when
-		answered: Question(questionName == "idPytaniaNadrzędnego", answer == "idOdpowiedziNaPytanieNadrzędne")
-		q: Question(questionName == "idPytania")
+		answered: Question(questionName == "loveAllCaps", answer == "yesLoveCaps")
+		q: Question(questionName == "girlsOrBoysRule")
 	then
 		q.setAnswer(askQuestion(q));
 		update(q);
 end
 
-rule "idPytania"
+rule "insistFiveAwesomeGirl"
 	when
-		answered: Question(questionName == "idPytaniaNadrzędnego", answer == "idOdpowiedziNaPytanieNadrzędne")
-		q: Question(questionName == "idPytania")
+		answered: Question(questionName == "loveAllCaps", answer == "noLoveCaps")
+		q: Question(questionName == "insistFiveAwesomeGirl")
 	then
 		q.setAnswer(askQuestion(q));
 		update(q);
 end
 
-rule "idPytania"
+rule "likeReallyHappy"
 	when
-		answered: Question(questionName == "idPytaniaNadrzędnego", answer == "idOdpowiedziNaPytanieNadrzędne")
-		q: Question(questionName == "idPytania")
+		answered: Question(questionName == "insistFiveAwesomeGirl", answer == "noInsist")
+		q: Question(questionName == "likeReallyHappy")
 	then
 		q.setAnswer(askQuestion(q));
 		update(q);
 end
 
-rule "idPytania"
+rule "talkSlowOrFast"
 	when
-		answered: Question(questionName == "idPytaniaNadrzędnego", answer == "idOdpowiedziNaPytanieNadrzędne")
-		q: Question(questionName == "idPytania")
+		answered: Question(questionName == "likeReallyHappy", answer == "noLikeHappy")
+		q: Question(questionName == "talkSlowOrFast")
 	then
 		q.setAnswer(askQuestion(q));
 		update(q);
 end
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+rule "preferReview"
+	when
+		answered: Question(questionName == "talkSlowOrFast", answer == "talkSlow")
+		q: Question(questionName == "preferReview")
+	then
+		q.setAnswer(askQuestion(q));
+		update(q);
+end
 
 ////////////////////
 // REGUŁY KOŃCOWE //
