@@ -550,3 +550,66 @@ end
 /////////////
 // VLOGGER //
 /////////////
+
+rule "newOrOldVideosOld"
+	when
+		answered: Question(questionName == "newOrOldVideos", answer == "old")
+		s: Solution(solutionName == "newOrOldVideosOld")
+	then
+		s.setIsTrue(true);
+		update(s);
+end
+
+rule "relationshipsHappy"
+	when
+		answered: Question(questionName == "relationships", answer == "happy")
+		s: Solution(solutionName == "relationshipsHappy")
+	then
+		s.setIsTrue(true);
+		update(s);
+end
+
+rule "doctorWhoYes"
+	when
+		answered: Question(questionName == "doctorWho", answer == "yesDoctor")
+		s: Solution(solutionName == "doctorWhoYes")
+	then
+		s.setIsTrue(true);
+		update(s);
+end
+
+rule "howManyWatchFive"
+	when
+		answered: Question(questionName == "howManyWatch", answer == "five")
+		s: Solution(solutionName == "howManyWatchFive")
+	then
+		s.setIsTrue(true);
+		update(s);
+end
+
+rule "shortOrTallShort"
+	when
+		answered: Question(questionName == "shortOrTall", answer == "short")
+		s: Solution(solutionName == "shortOrTallShort")
+	then
+		s.setIsTrue(true);
+		update(s);
+end
+
+rule "tallGirlsOrBoysGirls"
+	when
+		answered: Question(questionName == "tallGirlsOrBoys", answer == "tallGirls")
+		s: Solution(solutionName == "tallGirlsOrBoysGirls")
+	then
+		s.setIsTrue(true);
+		update(s);
+end
+
+rule "tallGirlsOrBoysBoys"
+	when
+		answered: Question(questionName == "tallGirlsOrBoys", answer == "tallBoys")
+		s: Solution(solutionName == "tallGirlsOrBoysBoys")
+	then
+		s.setIsTrue(true);
+		update(s);
+end
