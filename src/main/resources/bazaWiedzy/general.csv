@@ -40,11 +40,12 @@ typographyIsCool, radio, 2, yesTypography, noTypography
 fiveAwesomes, radio, 2, yesfiveAwesomes, nofiveAwesomes
 awesomeGirlsOrBoys, radio, 2, awesomeGirls, awesomeBoys
 youArePicky, radio, 1, yesPicky
-, radio, 2, 
-, radio, 2, 
-, radio, 2, 
-, radio, 2, 
-, radio, 2, 
-, radio, 2, 
-, radio, 2, 
-, radio, 2, 
+likeRapping, radio, 2, yesRapping, noRapping
+likeBreakfastSongs, radio, 2, yesBreakfast, noBreakfast
+likeChartsGraphs, radio, 2, yesCharts, noCharts
+loveAllCaps, radio, 2, yesLoveCaps, noLoveCaps
+girlsOrBoysRule, radio, 2, girlsRule, boysRule
+insistFiveAwesomeGirl, radio, 2, yesInsist, noInsist
+likeReallyHappy, radio, 2, yesLikeHappy, noLikeHappy
+talkSlowOrFast, radio, 2, talkFast, talkSlow
+preferReview, radio, 2, reviewtech, reviewBooks
