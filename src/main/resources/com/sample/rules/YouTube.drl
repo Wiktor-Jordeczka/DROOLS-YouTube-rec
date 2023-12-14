@@ -6,7 +6,6 @@ import java.awt.event.*;
 import java.io.*;
 
 
-
 // Funkcja zadająca pytanie i przyjmująca odpowiedź
 function String askQuestion(Question q){
 	JPanel panel = new JPanel(); // Tworzymy panel i layout
@@ -35,7 +34,7 @@ function String askQuestion(Question q){
 	    radios.get(0).setSelected(true);
 	    
 	    // Zbieramy odpowiedź
-	    JOptionPane.showMessageDialog(null, panel, "Pytanie", JOptionPane.INFORMATION_MESSAGE);
+	    JOptionPane.showMessageDialog(null, panel, "Question", JOptionPane.INFORMATION_MESSAGE);
 	    for(int i=0; i<numOfButtons; i++) {
 	    	if(radios.get(i).isSelected()){
 	    		answer = questionOptions.get(i);
@@ -59,13 +58,6 @@ function void displaySolution(Solution s){
         
     JOptionPane.showMessageDialog(null, panel, "Solution found!", JOptionPane.INFORMATION_MESSAGE);
 }
-
-// Nie działa
-/*
-query "getSolution"
-	solution : Solution(isTrue == true)
-end
-*/
 
 // Klasa pytania
 declare Question
@@ -98,12 +90,10 @@ rule "init"
 		});
 		
 		// Słownik rozwiązań
-		//HashMap<String, String> solutionValues = new HashMap<String, String>();
 		BufferedReader sol = new BufferedReader(new FileReader("src/main/resources/bazaWiedzy/englishSolutions.csv"));
 		sol.readLine();
 		sol.lines().forEach(line -> {
 			String[] values = line.split("; ");
-			//solutionValues.put(values[0], values[1]);
 			Solution s = new Solution(values[0], values[1], false);
 			insert(s);
 		});
@@ -124,38 +114,6 @@ rule "init"
 			insert(q);
 		});
 end
-
-////////////////////
-// SZABLON REGUŁY //
-////////////////////
-
-rule "idPytania"
-	when
-		answered: Question(questionName == "idPytaniaNadrzędnego", answer == "idOdpowiedziNaPytanieNadrzędne")
-		q: Question(questionName == "idPytania")
-	then
-		q.setAnswer(askQuestion(q));
-		update(q);
-end
-////////////////////
-////////////////////
-////////////////////
-
-////////////////////////////
-// SZABLON REGUŁY KOŃCOWEJ//
-////////////////////////////
-
-rule "idRozwiązania"
-	when
-		answered: Question(questionName == "idPytaniaNadrzędnego", answer == "idOdpowiedziNaPytanieNadrzędne")
-		s: Solution(solutionName == "idRozwiązania")
-	then
-		s.setIsTrue(true);
-		update(s);
-end
-////////////////////////////
-////////////////////////////
-////////////////////////////
 
 // Odczytanie rozwiązania
 rule "showSolution"
